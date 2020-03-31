@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="logo page-header__logo" href="">
+        <img class="page-header__logo-image logo-image__mobile" src="" width="33" height="38" alt="Логотип «Кэт Энерджи»">
+        <img class="page-header__logo-image logo-image__main" src="" width="101" height="18" alt="Логотип «Кэт Энерджи»">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__button menu-button"></button>
+        <ul class="main-nav__list main-menu">
+          <li class="main-menu__item main-menu__item--active">
+            <a class="maim-menu__item-link" href="index.html">Главная</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="maim-menu__item-link" href="catalog.html">Каталог Продукции</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="maim-menu__item-link">Подбор Программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="page-main__title">Подбор Программы</h1>
+      <form class="program-form">
+        <p class="program-from__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <fieldset class="program-c personal-info">
+          <legend class="visually-hidden">Персональная информация</legend>
+          <label class="personal-info__label">Имя:*
+            <input class="personal-info__name" type="text" name="cat-name" placeholder="Барсик" required>
+          </label>
+          <label class="personal-info__label">Вес (кг):*
+            <input class="personal-info__weight" type="number" name="cat-weight" required>
+          </label>
+          <label class="personal-info__label">Возраст (лет):
+            <input class="personal-info__age" type="number" name="cat-age" required>
+          </label>
+        </fieldset>
+        <fieldset class="program-form__fieldset goal">
+          <legend class="visually-hidden">Цель программы</legend>
+          <label class="goal__label" for="weight-loss">
+            <input class="goal__radio-button" type="radio" id="weight-loss" name="goal-selection">Похудение
+          </label>
+          <label class="goal__label" for="weight-gain">
+            <input class="goal__radio-button" type="radio" id="weight-gain" name="goal-selection">Набор массы
+          </label>
+          <label class="goal__label" for="weight-advice">
+            <input class="goal__radio-button" type="radio" id="weight-advice" name="goal-selection">Не знаю (нужен ваш совет)
+          </label>
+        </fieldset>
+        <fieldset class="program-form__fieldset contacts">
+          <legend class="visually-hidden"></legend>
+          <h2 class="contacts__title">Контактные данные (владельца кота)</h2>
+          <label class="contacts__label" for="your-emai">E-mail:*
+            <input class="contacts__email" type="email" name="your-email" placeholder="kuklachev@gmail.com" required>
+          </label>
+          <label class="contacts__label" for="your-phone">Телефон:*
+            <input class="contacts__phone" type="tel" name="your-phone">
+          </label>
+        </fieldset>
+        <fieldset class="program-form__fieldset comments">
+          <legend class="visually-hidden"></legend>
+          <h2 class="comments__title">Комментарий</h2>
+          <label class="visually-hidden" for="your-comment"></label>
+          <textarea class="comments__comment" name="your-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="program-form__fieldset additionals">
+          <h2 class="additionals__title">Дополнительно</h2>
+          <label class="additionals__label" for="sugar-change">
+            <input class="additionals__checkbox" type="checkbox" name="sugar-change" id="sugar-change" checked>Сахарозаменитель
+          </label>
+          <label class="additionals__label" for="water">
+            <input class="additionals__checkbox" type="checkbox" name="water" id="water">Питьевая вода
+          </label>
+          <label class="additionals__label" for="milk">
+            <input class="additionals__checkbox" type="checkbox" name="milk" id="milk">Молоко
+          </label>
+          <label class="additionals__label" for="vitamins">
+            <input class="additionals__checkbox" type="checkbox" name="vitamins" id="vitamins">Витамины
+          </label>
+        </fieldset>
+        <button class="button-link">Отправить заявку</button>
+        <p class="program-form__note">*- Обязательные поля</p>
+      </form>
+    </main>
+    <footer class="page-footer">
+      <section class="map-section">
+        <h2 class="map-section__title">Приглашаем к сотрудничеству дилеров</h2>
+        <p class="map-section__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <img class="map-section__image" src="#" width="1345" height="645">
+      </section>
+      <a class="logo page-footer__logo" href="">
+        <img class="page-footer__logo-image logo-image__main" src="" width="33" height="38" alt="Логотип «Кэт Энерджи»">
+      </a>
+      <ul class="page-footer__social-list social-list">
+        <li class="social-list__item">
+          <a href="#" aria-label="ВКонтакте">
+            <svg class="social-list__item-image social-list__item-image-vk" src="#"></svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" aria-label="Instagram">
+            <svg class="social-list__item-image social-list__item-image-insta" src="#"></svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" aria-label="Facebook">
+            <svg class="social-list__item-image social-list__item-image-fb" src="#"></svg>
+          </a>
+        </li>
+      </ul>
+      <a class="page-footer__contact" href="#">HTML Academy</a>
+      <a class="page-footer__developed" href="#">
+        <img class="page-footer__developed-image">
+      </a>
+    </footer>
+  </body>
+</html>
