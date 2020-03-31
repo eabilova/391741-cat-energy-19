@@ -8,54 +8,52 @@
     <header class="page-header">
       <a class="logo page-header__logo" href="">
         <img class="page-header__logo-image logo-image__mobile" src="" width="33" height="38" alt="Логотип «Кэт Энерджи»">
-      </a>
-      <a class="logo page-header__logo" href="">
         <img class="page-header__logo-image logo-image__main" src="" width="101" height="18" alt="Логотип «Кэт Энерджи»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__button menu-button"></button>
         <ul class="main-nav__list main-menu">
           <li class="main-menu__item main-menu__item--active">
-            <a class="maim-menu__item-link">Главная</a>
+            <a class="maim-menu__item-link" href="index.html">Главная</a>
           </li>
           <li class="main-menu__item">
-            <a class="maim-menu__item-link" href="">Каталог Продукции</a>
+            <a class="maim-menu__item-link" href="catalog.html">Каталог Продукции</a>
           </li>
           <li class="main-menu__item">
-            <a class="maim-menu__item-link" href="">Подбор Программы</a>
+            <a class="maim-menu__item-link">Подбор Программы</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
+      <h1 class="page-main__title">Подбор Программы</h1>
       <form class="program-form">
-        <h1 class="program-form__title">Подбор Программы</h1>
         <p class="program-from__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <fieldset class="program-form__personal-info personal-info">
+        <fieldset class="program-c personal-info">
           <legend class="visually-hidden">Персональная информация</legend>
-          <label class="personal-info__label" for="cat-name">Имя:*
+          <label class="personal-info__label">Имя:*
             <input class="personal-info__name" type="text" name="cat-name" placeholder="Барсик" required>
           </label>
-          <label class="personal-info__label" for="cat-weight">Вес (кг):*
+          <label class="personal-info__label">Вес (кг):*
             <input class="personal-info__weight" type="number" name="cat-weight" required>
           </label>
-          <label class="personal-info__label" for="cat-age">Возраст (лет):
+          <label class="personal-info__label">Возраст (лет):
             <input class="personal-info__age" type="number" name="cat-age" required>
           </label>
         </fieldset>
-        <fieldset class="program-form__goal goal">
+        <fieldset class="program-form__fieldset goal">
           <legend class="visually-hidden">Цель программы</legend>
           <label class="goal__label" for="weight-loss">
-            <input class="goal__radio-button" type="radio" name="weight-loss">Похудение
+            <input class="goal__radio-button" type="radio" id="weight-loss" name="goal-selection">Похудение
           </label>
           <label class="goal__label" for="weight-gain">
-            <input class="goal__radio-button" type="radio" name="weight-gain">Набор массы
+            <input class="goal__radio-button" type="radio" id="weight-gain" name="goal-selection">Набор массы
           </label>
           <label class="goal__label" for="weight-advice">
-            <input class="goal__radio-button" type="radio" name="weight-advice">Не знаю (нужен ваш совет)
+            <input class="goal__radio-button" type="radio" id="weight-advice" name="goal-selection">Не знаю (нужен ваш совет)
           </label>
         </fieldset>
-        <fieldset class="program-form__contacts contacts">
+        <fieldset class="program-form__fieldset contacts">
           <legend class="visually-hidden"></legend>
           <h2 class="contacts__title">Контактные данные (владельца кота)</h2>
           <label class="contacts__label" for="your-emai">E-mail:*
@@ -64,23 +62,26 @@
           <label class="contacts__label" for="your-phone">Телефон:*
             <input class="contacts__phone" type="tel" name="your-phone">
           </label>
-          <h2 class="contacts__title">Комментарий</h2>
-          <label class="visually-hidden" for="your-comment"></label>
-          <textarea class="contacts__comment" name="your-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="program-form__additionals additionals">
+        <fieldset class="program-form__fieldset comments">
+          <legend class="visually-hidden"></legend>
+          <h2 class="comments__title">Комментарий</h2>
+          <label class="visually-hidden" for="your-comment"></label>
+          <textarea class="comments__comment" name="your-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset class="program-form__fieldset additionals">
           <h2 class="additionals__title">Дополнительно</h2>
           <label class="additionals__label" for="sugar-change">
-            <input class="additionals__checkbox" type="checkbox" name="sugar-change" checked>Сахарозаменитель
+            <input class="additionals__checkbox" type="checkbox" name="sugar-change" id="sugar-change" checked>Сахарозаменитель
           </label>
           <label class="additionals__label" for="water">
-            <input class="additionals__checkbox" type="checkbox" name="water">Питьевая вода
+            <input class="additionals__checkbox" type="checkbox" name="water" id="water">Питьевая вода
           </label>
           <label class="additionals__label" for="milk">
-            <input class="additionals__checkbox" type="checkbox" name="milk">Молоко
+            <input class="additionals__checkbox" type="checkbox" name="milk" id="milk">Молоко
           </label>
           <label class="additionals__label" for="vitamins">
-            <input class="additionals__checkbox" type="checkbox" name="vitamins">Витамины
+            <input class="additionals__checkbox" type="checkbox" name="vitamins" id="vitamins">Витамины
           </label>
         </fieldset>
         <button class="button-link">Отправить заявку</button>
