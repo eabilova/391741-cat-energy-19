@@ -3,30 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <a class="logo page-header__logo" href="">
-        <img class="page-header__logo-image logo-image__mobile" src="" width="33" height="38" alt="Логотип «Кэт Энерджи»">
         <img class="page-header__logo-image logo-image__main" src="" width="101" height="18" alt="Логотип «Кэт Энерджи»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__button menu-button"></button>
         <ul class="main-nav__list main-menu">
           <li class="main-menu__item main-menu__item--active">
-            <a class="maim-menu__item-link" href="index.html">Главная</a>
+            <a class="main-menu__item-link" href="index.html">Главная</a>
           </li>
           <li class="main-menu__item">
-            <a class="maim-menu__item-link">Каталог Продукции</a>
+            <a class="main-menu__item-link">Каталог Продукции</a>
           </li>
           <li class="main-menu__item">
-            <a class="maim-menu__item-link" href="form.html">Подбор Программы</a>
+            <a class="main-menu__item-link" href="form.html">Подбор Программы</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__title">Каталог продукции</h1>
+      <h1 class="section-title page-main__title">Каталог продукции</h1>
       <section class="catalog">
         <ul class="catalog__list catalog-list">
           <li class="catalog-list__item catalog-item">
@@ -195,7 +196,7 @@
               <img class="show-more__icon" src="#" width="30" height="30">
             </a>
             <p class="show-more__title">Показать еще 100500 товаров</p>
-            <p class="Show-more__subtitle">На самом деле вкусов гораздо больше!</p>
+            <p class="show-more__subtitle">На самом деле вкусов гораздо больше!</p>
             <button class="show-more__button">Показать все</button>
           </li>
         </ul>
@@ -248,13 +249,15 @@
       <div class="prize-section prize-wrapper">
         <p class="prize-section__text">Закажите все и получите чехол для кота в подарок!</p>
       </div>
-    </main>
-    <footer class="page-footer">
-      <section class="map-section">
-        <h2 class="map-section__title">Приглашаем к сотрудничеству дилеров</h2>
-        <p class="map-section__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <section class="map-section inner-map">
+        <div class="map-section__wrapper">
+          <h2 class="map-section__title">Приглашаем к сотрудничеству дилеров</h2>
+          <p class="map-section__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
         <img class="map-section__image" src="#" width="1345" height="645">
       </section>
+    </main>
+    <footer class="page-footer">
       <a class="logo page-footer__logo" href="">
         <img class="page-footer__logo-image logo-image__main" src="" width="33" height="38" alt="Логотип «Кэт Энерджи»">
       </a>
