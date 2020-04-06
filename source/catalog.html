@@ -3,30 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="logo page-header__logo" href="">
-        <img class="page-header__logo-image logo-image__mobile" src="" width="33" height="38" alt="Логотип «Кэт Энерджи»">
+      <a class="logo page-header__logo" href="index.html">
         <img class="page-header__logo-image logo-image__main" src="" width="101" height="18" alt="Логотип «Кэт Энерджи»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__button menu-button"></button>
         <ul class="main-nav__list main-menu">
           <li class="main-menu__item main-menu__item--active">
-            <a class="maim-menu__item-link" href="index.html">Главная</a>
+            <a class="main-menu__item-link" href="index.html">Главная</a>
           </li>
           <li class="main-menu__item">
-            <a class="maim-menu__item-link">Каталог Продукции</a>
+            <a class="main-menu__item-link">Каталог Продукции</a>
           </li>
           <li class="main-menu__item">
-            <a class="maim-menu__item-link" href="form.html">Подбор Программы</a>
+            <a class="main-menu__item-link" href="form.html">Подбор Программы</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__title">Каталог продукции</h1>
+      <h1 class="section-title page-main__title">Каталог продукции</h1>
       <section class="catalog">
         <ul class="catalog__list catalog-list">
           <li class="catalog-list__item catalog-item">
@@ -45,7 +46,7 @@
                   </tr>
                   <tr class="features-list__item features-item">
                     <td class="features-item__name">Цена</td>
-                    <td class="features-item__value">700 р.</td>
+                    <td class="features-item__value features-item__value--price">700 р.</td>
                   </tr>
                 </table>
               </div>
@@ -68,7 +69,7 @@
                   </tr>
                   <tr class="features-list__item features-item">
                     <td class="features-item__name">Цена</td>
-                    <td class="features-item__value">1000 р.</td>
+                    <td class="features-item__value features-item__value--price">1000 р.</td>
                   </tr>
                 </table>
               </div>
@@ -91,7 +92,7 @@
                   </tr>
                   <tr class="features-list__item features-item">
                     <td class="features-item__name">Цена</td>
-                    <td class="features-item__value">700 р.</td>
+                    <td class="features-item__value features-item__value--price">700 р.</td>
                   </tr>
                 </table>
               </div>
@@ -114,7 +115,7 @@
                   </tr>
                   <tr class="features-list__item features-item">
                     <td class="features-item__name">Цена</td>
-                    <td class="features-item__value">1000 р.</td>
+                    <td class="features-item__value features-item__value--price">1000 р.</td>
                   </tr>
                 </table>
               </div>
@@ -137,7 +138,7 @@
                   </tr>
                   <tr class="features-list__item features-item">
                     <td class="features-item__name">Цена</td>
-                    <td class="features-item__value">400 р.</td>
+                    <td class="features-item__value features-item__value--price">400 р.</td>
                   </tr>
                 </table>
               </div>
@@ -160,7 +161,7 @@
                   </tr>
                   <tr class="features-list__item features-item">
                     <td class="features-item__name">Цена</td>
-                    <td class="features-item__value">700 р.</td>
+                    <td class="features-item__value features-item__value--price">700 р.</td>
                   </tr>
                 </table>
               </div>
@@ -183,7 +184,7 @@
                   </tr>
                   <tr class="features-list__item features-item">
                     <td class="features-item__name">Цена</td>
-                    <td class="features-item__value">500 р.</td>
+                    <td class="features-item__value features-item__value--price">500 р.</td>
                   </tr>
                 </table>
               </div>
@@ -195,7 +196,7 @@
               <img class="show-more__icon" src="#" width="30" height="30">
             </a>
             <p class="show-more__title">Показать еще 100500 товаров</p>
-            <p class="Show-more__subtitle">На самом деле вкусов гораздо больше!</p>
+            <p class="show-more__subtitle">На самом деле вкусов гораздо больше!</p>
             <button class="show-more__button">Показать все</button>
           </li>
         </ul>
@@ -206,9 +207,9 @@
           <li class="additions-list__item additions-item">
             <h3 class="additions-item__title">Сахарозаменитель</h3>
             <table class="additions-item__info additions-info">
-              <tr class="additions-info__item additions-item">
-                <td class="additions-item__name">1 упаковка (100 г)</td>
-                <td class="additions-item__value">200 р.</td>
+              <tr class="additions-info__descr additions-descr">
+                <td class="additions-descr__name">1 упаковка (100 г)</td>
+                <td class="additions-descr__value">200 р.</td>
               </tr>
             </table>
             <button class="button-link">Заказать</button>
@@ -216,9 +217,9 @@
           <li class="additions-list__item additions-item">
             <h3 class="additions-item__title">Питьевая вода</h3>
             <table class="additions-item__info additions-info">
-              <tr class="additions-info__item additions-item">
-                <td class="additions-item__name">5 литров</td>
-                <td class="additions-item__value">50 р.</td>
+              <tr class="additions-info__item additions-descr">
+                <td class="additions-descr__name">5 литров</td>
+                <td class="additions-descr__value">50 р.</td>
               </tr>
             </table>
             <button class="button-link">Заказать</button>
@@ -226,9 +227,9 @@
           <li class="additions-list__item additions-item">
             <h3 class="additions-item__title">Молоко</h3>
             <table class="additions-item__info additions-info">
-              <tr class="additions-info__item additions-item">
-                <td class="additions-item__name">1 литр</td>
-                <td class="additions-item__value">100 р.</td>
+              <tr class="additions-info__item additions-descr">
+                <td class="additions-descr__name">1 литр</td>
+                <td class="additions-descr__value">100 р.</td>
               </tr>
             </table>
             <button class="button-link">Заказать</button>
@@ -236,9 +237,9 @@
           <li class="additions-list__item additions-item">
             <h3 class="additions-item__title">Витамины</h3>
             <table class="additions-item__info additions-info">
-              <tr class="additions-info__item additions-item">
-                <td class="additions-item__name">1 упаковка (30 г)</td>
-                <td class="additions-item__value">300 р.</td>
+              <tr class="additions-info__item additions-descr">
+                <td class="additions-descr__name">1 упаковка (30 г)</td>
+                <td class="additions-descr__value">300 р.</td>
               </tr>
             </table>
             <button class="button-link">Заказать</button>
@@ -248,13 +249,15 @@
       <div class="prize-section prize-wrapper">
         <p class="prize-section__text">Закажите все и получите чехол для кота в подарок!</p>
       </div>
-    </main>
-    <footer class="page-footer">
-      <section class="map-section">
-        <h2 class="map-section__title">Приглашаем к сотрудничеству дилеров</h2>
-        <p class="map-section__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <section class="map-section inner-map">
+        <div class="map-section__wrapper">
+          <h2 class="map-section__title">Приглашаем к сотрудничеству дилеров</h2>
+          <p class="map-section__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
         <img class="map-section__image" src="#" width="1345" height="645">
       </section>
+    </main>
+    <footer class="page-footer">
       <a class="logo page-footer__logo" href="">
         <img class="page-footer__logo-image logo-image__main" src="" width="33" height="38" alt="Логотип «Кэт Энерджи»">
       </a>
