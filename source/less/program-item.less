@@ -1,13 +1,12 @@
 .program-item {
   padding: 22px 20px;
 
-  background-color: #f2f2f2;
+  background-color: @page-bg-color;
 
   &:first-child {
     margin-bottom: 20px;
   }
 }
-
 
 .program-item__title {
   font-weight: normal;
@@ -17,14 +16,14 @@
 }
 
 .program-item__description {
-  color: #444444;
-  font-family: "Arial", sans-serif;
+  color: @arial-font-color;
+  font-family: @arial-font;
 }
 
 .program-item__link {
   font-size: 16px;
   line-height: 16px;
-  color: #111111;
+  color: @main-font-color;
 
   text-transform: uppercase;
 }
