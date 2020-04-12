@@ -1,7 +1,13 @@
 .main-menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
+
+  list-style: none;
 }
 
 .main-menu__item-link {
@@ -11,4 +17,23 @@
 
   color: @main-font-color;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .main-menu {
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: normal;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-menu__item-link {
+    font-size: 20px;
+    color: @alt-font-color;
+  }
 }

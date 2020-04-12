@@ -1,4 +1,7 @@
 .map-section {
+  display: flex;
+  flex-direction: column;
+
   text-align: left;
 
   &.inner-map {
@@ -7,7 +10,12 @@
 }
 
 .map-section__wrapper {
+  display: flex;
+  justify-content: space-between;
   padding: 31px 25px 28px 19px;
+  width: @mobile-width;
+
+  background-color: @alt-font-color;
 }
 
 .map-section__title {
@@ -22,4 +30,31 @@
 .map-section__address {
   line-height: 20px;
   font-family: @arial-font;
+}
+
+.map-section__image {
+  height: 400px;
+  min-width: @mobile-width;
+}
+
+@media (min-width: @tablet-width) {
+  .map-section__wrapper {
+    width: @tablet-width;
+  }
+  .map-section__image {
+    min-width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map-section__wrapper {
+    position: absolute;
+    margin-top: 95px;
+    left: 120px;
+    z-index: 2;
+    width: 570px;
+  }
+  .map-section__image {
+    min-width: @desktop-width;
+  }
 }

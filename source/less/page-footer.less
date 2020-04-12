@@ -1,7 +1,14 @@
 .page-footer {
-  padding: 39px 20px 22px 20px;
-
   background-color: @page-bg-color;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 39px 20px 22px 20px;
+  width: @mobile-width;
+  margin: 0 auto;
 }
 
 .page-footer__logo {
@@ -17,4 +24,36 @@
   line-height: 16px;
   color: @arial-font-color;
   font-family: @arial-font;
+}
+
+.page-footer__contact::after {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 34px;
+  margin-left: 141px;
+
+  vertical-align: middle;
+
+  background-image: url("../img/htmlacademy.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    width: @tablet-width;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .page-footer__contact {
+    &::after {
+      margin-left: 23px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: @desktop-width;
+  }
 }

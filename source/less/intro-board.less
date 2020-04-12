@@ -1,25 +1,100 @@
 .intro-board {
+  position: relative;
+
+  margin: 0 auto;
   margin-bottom: 22px;
+  padding-top: 29px;
 
   color: @alt-font-color;
   text-align: center;
+
+  background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 280px 270px, 320px 305px;
+  background-position: center 170px, center top;
+  min-height: 440px;
 }
 
 .intro-board__wrapper {
-  background-color: @main-bg-color;
-  background-image: url("../img/index-background-mobile.png");
-  background-repeat: no-repeat;
+  width: 250px;
+  margin: 0 auto;
 }
 
 .intro-board__title {
+  margin-top: 0;
   margin-bottom: 19px;
 
-  font-weight: normal;
   font-size: 36px;
   line-height: 36px;
+  font-weight: normal;
 }
 
 .intro-board__subtitle {
   line-height: 14px;
   text-transform: uppercase;
+}
+
+.intro-board__button {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 300px;
+}
+
+@media (min-width: @tablet-width) {
+  .intro-board {
+    width: @tablet-width;
+    min-height: 860px;
+    padding-top: 61px;
+    margin-bottom: 0;
+
+    color: @main-font-color;
+
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-size: 709px 609px;
+    background-position: center 265px;
+  }
+  .intro-board__wrapper {
+    width: 420px;
+    margin-left: 120px;
+  }
+  .intro-board__title {
+    margin-bottom: 33px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+  .intro-board__subtitle {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+  .intro-board__button {
+    width: 245px;
+    margin-top: 48px;
+    margin-left: 120px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro-board {
+    padding-top: 0;
+    width: @desktop-width;
+    min-height: 696px;
+    margin-bottom: 80px;
+
+    color: @main-font-color;
+
+    background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg");
+    background-size: 552px 499px, 720px 696px;
+    background-position: 560px 142px, top right;
+  }
+  .intro-board__wrapper {
+    padding-top: 226px;
+  }
+  .intro-board__button {
+    margin-top: 53px;
+  }
+
 }
