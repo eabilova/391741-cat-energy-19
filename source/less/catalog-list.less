@@ -1,0 +1,13 @@
+.catalog-list {
+  display: flex;
+  flex-direction: column;
+
+  list-style-type: none;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

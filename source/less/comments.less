@@ -1,4 +1,22 @@
-.comments__comment {
+.comments__comment-field {
+  width: 280px;
+  min-height: 150px;
   margin: 0 auto;
+
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .comments__comment-field {
+    width: 631px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comments {
+    width: @desktop-width;
+  }
+  .comments__comment-field {
+    width: 1220px;
+  }
 }

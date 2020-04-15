@@ -1,5 +1,9 @@
 .personal-info {
-  padding: 21px 20px 22px 20px;
+  &.program-form__fieldset {
+    padding-bottom: 23px;
+
+    border-bottom: 1px solid @outline-color;
+  }
 }
 
 .personal-info__label {
@@ -7,15 +11,32 @@
 }
 
 .personal-info__name {
+  width: 229px;
   margin-left: 15px;
   margin-bottom: 14px;
+
+  text-transform: uppercase;
 }
 
 .personal-info__weight {
+  width: 204px;
   margin-left: 18px;
   margin-bottom: 14px;
 }
 
 .personal-info__age {
+  width: 172px;
   margin-left: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .personal-info__name {
+    width: 567px;
+  }
+  .personal-info__weight {
+    width: 536px;
+  }
+  .personal-info__age {
+    width: 497px;
+  }
 }

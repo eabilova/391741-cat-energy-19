@@ -3,26 +3,37 @@
 }
 
 .program-from__title {
+  display: block;
+  width: 226px;
+  margin: 0 auto;
+  margin-top: 35px;
+  margin-bottom: 39px;
+
   text-align: left;
   text-transform: uppercase;
-
-  margin-bottom: 39px;
 }
 
 .program-form__fieldset {
+  display: flex;
+  width: @mobile-width;
+  padding: 0;
+  margin: 0 auto;
+
   font-size: 16px;
   color: @sec-font-color;
+
+  border: none;
 }
 
 .program-form__fieldset-title {
+  margin-bottom: 31px;
+  margin-left: 20px;
+
   font-size: 24px;
   line-height: 24px;
   text-align: left;
   font-weight: normal;
   color: @main-font-color;
-
-  margin-bottom: 31px;
-  margin-left: 20px;
 }
 
 .program-form__note {
@@ -30,4 +41,43 @@
   text-align: center;
   color: @arial-font-color;
   font-family: "Arial", sans-serif;
+}
+
+.program-form__button {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .program-form__fieldset {
+    width: @tablet-width;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .program-form__fieldset-title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .program-form__button  {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-form__wrapper {
+    display: flex;
+    width: @desktop-width;
+    margin: 0 auto;
+  }
+  .program-form__button  {
+    width: 568px;
+  }
 }

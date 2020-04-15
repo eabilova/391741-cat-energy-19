@@ -1,6 +1,14 @@
 .contacts {
-  margin-top: 31px;
-  margin-bottom: 31px;
+  &.program-form__fieldset {
+    padding-top: 31px;
+    padding-bottom: 31px;
+
+    border-bottom: 1px solid @outline-color;
+  }
+}
+
+.contacts__title {
+  width: 181px;
 }
 
 .contacts__label {
@@ -8,12 +16,41 @@
 }
 
 .contacts__email {
+  width: 219px;
   margin-left: 12px;
   margin-bottom: 14px;
+
   text-transform: uppercase;
 }
 
 .contacts__phone {
+  width: 204px;
   margin-left: 10px;
+
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    width: @tablet-width;
+    display: flex;
+    flex-direction: column;
+  }
+  .contacts__title {
+    width: 512px;
+  }
+  .contacts__email {
+    width: 551px;
+  }
+
+  .contacts__phone {
+    width: 535px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__wrapper {
+    width: @desktop-width;
+    flex-direction: row;
+  }
 }

@@ -6,3 +6,25 @@
 .additionals__label {
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .additionals__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: @tablet-width;
+  }
+  .additionals__label {
+    width: 315px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additionals {
+    width: @desktop-width;
+  }
+  .additionals__wrapper {
+    width: @desktop-width;
+  }
+}
