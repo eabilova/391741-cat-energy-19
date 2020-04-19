@@ -6,20 +6,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 39px 20px 22px 20px;
+  box-sizing: border-box;
   width: @mobile-width;
   margin: 0 auto;
 }
 
 .page-footer__logo {
+  margin-top: 39px;
   margin-bottom: 31px;
 }
 
 .page-footer__social-list {
-  margin-bottom: 22px;
+  margin: 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  width: 280px;
+  min-height: 62px;
+  border-top: 1px solid @outline-color;
+  border-bottom: 1px solid @outline-color;
 }
 
 .page-footer__contact {
+  padding-top: 22px;
+  padding-bottom: 22px;
+
   font-size: 16px;
   line-height: 16px;
   color: @arial-font-color;
@@ -31,7 +41,7 @@
   display: inline-block;
   width: 27px;
   height: 34px;
-  margin-left: 141px;
+  margin-left: 130px;
 
   vertical-align: middle;
 

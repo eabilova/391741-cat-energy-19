@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -14,7 +15,7 @@
           <img class="page-header__logo-image logo-image__main" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип «Кэт Энерджи»">
         </a>
         <button class="menu-button">
-          <img class="menu-button__icon" src="img/icon-mobile-menu.svg" width="25" height="19">
+          <img class="menu-button__icon" src="img/icon-mobile-menu.svg" width="25" height="19" alt="Открыть">
         </button>
       </div>
       <nav class="main-nav">
@@ -65,11 +66,11 @@
           <legend class="visually-hidden"></legend>
           <h2 class="program-form__fieldset-title contacts__title">Контактные данные (владельца кота)</h2>
           <div class="contacts__wrapper">
-            <label class="contacts__label" for="your-emai">E-mail:*
-              <input class="contacts__email" type="email" name="your-email" placeholder="kuklachev@gmail.com" required>
+            <label class="contacts__label" for="your-email">E-mail:*
+              <input class="contacts__email" type="email" name="your-email" id="your-email" placeholder="kuklachev@gmail.com" required>
             </label>
             <label class="contacts__label" for="your-phone">Телефон:*
-              <input class="contacts__phone" type="tel" name="your-phone" placeholder="8 (960) 900-60-90">
+              <input class="contacts__phone" type="tel" name="your-phone" id="your-phone" placeholder="8 (960) 900-60-90">
             </label>
           </div>
         </fieldset>
@@ -77,7 +78,7 @@
           <legend class="visually-hidden"></legend>
           <h2 class="program-form__fieldset-title comments__title">Комментарий</h2>
           <label class="visually-hidden" for="your-comment"></label>
-          <textarea class="comments__comment-field" name="your-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="comments__comment-field" name="your-comment" id="your-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="program-form__fieldset additionals">
           <h2 class="program-form__fieldset-title additionals__title">Дополнительно</h2>
@@ -106,18 +107,18 @@
           <h2 class="map-section__title">Приглашаем к сотрудничеству дилеров</h2>
           <p class="map-section__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
-        <iframe class="map-section__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300338!2d30.320858716477954!3d59.93871916905372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1586624167562!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe class="map-section__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300338!2d30.320858716477954!3d59.93871916905372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1586624167562!5m2!1sru!2sru" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="logo page-footer__logo" href="">
-          <img class="page-footer__logo-image logo-image__main" src="" width="33" height="38" alt="Логотип «Кэт Энерджи»">
+          <img class="page-footer__logo-image logo-image__main" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт Энерджи»">
         </a>
         <ul class="page-footer__social-list social-list">
           <li class="social-list__item">
             <a href="#" aria-label="ВКонтакте">
-              <svg class="social-list__item-image social-list__item-image-vk" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
+              <svg class="social-list__item-image social-list__item-image-vk" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
                 <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
                   c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4h-1.4c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
                   s0.8-0.4,1-0.4h3.1c0.1,0,0.4,0.1,0.7,0.3C5.3,1,5.4,1.3,5.5,1.4c0.7,1.5,1.5,2.8,2.6,4C8.2,5,8.3,4,8.2,3.1c0-0.4-0.1-0.8-0.2-1
@@ -136,7 +137,7 @@
           </li>
           <li class="social-list__item">
             <a href="#" aria-label="Instagram">
-              <svg class="social-list__item-image social-list__item-image-insta" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
+              <svg class="social-list__item-image social-list__item-image-insta" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
                 <style type="text/css">
                   .st0{fill:#231F20;}
                 </style>
@@ -148,7 +149,7 @@
           </li>
           <li class="social-list__item">
             <a href="#" aria-label="Facebook">
-              <svg class="social-list__item-image social-list__item-image-fb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
+              <svg class="social-list__item-image social-list__item-image-fb" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
                 <path d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18 h2.8V9.1h2.9V6.8H5.9V6.3c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6H1.1v2.3h2V18 z"/>
                 </svg>
             </a>
