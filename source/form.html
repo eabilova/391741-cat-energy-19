@@ -33,38 +33,45 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="section-title page-main__title">Подбор Программы</h1>
+      <div class="section-title__wrapper">
+         <h1 class="section-title page-main__title">Подбор Программы</h1>
+      </div>
       <form class="program-form">
-        <p class="program-from__title">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <div class="program-form__title-wrapper">
+          <p class="program-from__title">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        </div>
         <div class="program-form__wrapper">
           <fieldset class="program-form__fieldset personal-info">
             <legend class="visually-hidden">Персональная информация</legend>
-            <label class="personal-info__label">Имя:*
+            <div class="program-form__fieldset-wrapper shorten__wrapper">
+              <label class="personal-info__label">Имя:*
               <input class="personal-info__name" type="text" name="cat-name" placeholder="Барсик" required>
-            </label>
-            <label class="personal-info__label">Вес (кг):*
-              <input class="personal-info__weight" type="number" name="cat-weight" placeholder="7" required>
-            </label>
-            <label class="personal-info__label">Возраст (лет):
-              <input class="personal-info__age" type="number" name="cat-age" placeholder="7" required>
-            </label>
+              </label>
+              <label class="personal-info__label">Вес (кг):*
+                <input class="personal-info__weight" type="number" name="cat-weight" placeholder="7" required>
+              </label>
+              <label class="personal-info__label">Возраст (лет):
+                <input class="personal-info__age" type="number" name="cat-age" placeholder="7" required>
+              </label>
+            </div>
           </fieldset>
           <fieldset class="program-form__fieldset goal">
             <legend class="visually-hidden">Цель программы</legend>
-            <label class="goal__label" for="weight-loss">
+            <div class="program-form__fieldset-wrapper shorten__wrapper">
+              <label class="goal__label" for="weight-loss">
               <input class="goal__radio-button" type="radio" id="weight-loss" name="goal-selection" checked>Похудение
-            </label>
-            <label class="goal__label" for="weight-gain">
-              <input class="goal__radio-button" type="radio" id="weight-gain" name="goal-selection">Набор массы
-            </label>
-            <label class="goal__label" for="weight-advice">
-              <input class="goal__radio-button" type="radio" id="weight-advice" name="goal-selection">Не знаю (нужен ваш совет)
-            </label>
+              </label>
+              <label class="goal__label" for="weight-gain">
+                <input class="goal__radio-button" type="radio" id="weight-gain" name="goal-selection">Набор массы
+              </label>
+              <label class="goal__label" for="weight-advice">
+                <input class="goal__radio-button" type="radio" id="weight-advice" name="goal-selection">Не знаю (нужен ваш совет)
+              </label>
+            </div>
           </fieldset>
         </div>
         <fieldset class="program-form__fieldset contacts">
-          <legend class="visually-hidden"></legend>
-          <h2 class="program-form__fieldset-title contacts__title">Контактные данные (владельца кота)</h2>
+          <legend class="program-form__fieldset-title contacts__title">Контактные данные (владельца кота)</legend>
           <div class="contacts__wrapper">
             <label class="contacts__label" for="your-email">E-mail:*
               <input class="contacts__email" type="email" name="your-email" id="your-email" placeholder="kuklachev@gmail.com" required>
@@ -75,13 +82,14 @@
           </div>
         </fieldset>
         <fieldset class="program-form__fieldset comments">
-          <legend class="visually-hidden"></legend>
-          <h2 class="program-form__fieldset-title comments__title">Комментарий</h2>
-          <label class="visually-hidden" for="your-comment"></label>
-          <textarea class="comments__comment-field" name="your-comment" id="your-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <legend class="program-form__fieldset-title comments__title">Комментарий</legend>
+          <div class="program-form__fieldset-wrapper">
+            <label class="visually-hidden" for="your-comment"></label>
+            <textarea class="comments__comment-field" name="your-comment" id="your-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
         </fieldset>
         <fieldset class="program-form__fieldset additionals">
-          <h2 class="program-form__fieldset-title additionals__title">Дополнительно</h2>
+          <legend class="program-form__fieldset-title additionals__title">Дополнительно</legend>
           <div class="additionals__wrapper">
             <label class="additionals__label" for="sugar-change">
             <input class="additionals__checkbox" type="checkbox" name="sugar-change" id="sugar-change" checked>Сахарозаменитель

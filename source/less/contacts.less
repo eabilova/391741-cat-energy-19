@@ -1,9 +1,15 @@
 .contacts {
-  &.program-form__fieldset {
-    padding-top: 31px;
-    padding-bottom: 31px;
+  padding-top: 31px;
+  padding-bottom: 31px;
 
-    border-bottom: 1px solid @outline-color;
+  border: none;
+  border-top: 3px solid @main-bg-color;
+  border-bottom: 1px solid @outline-color;
+}
+
+@media (min-width: @mobile-width) and (max-width: 767px) {
+  .contacts {
+    padding: 0;
   }
 }
 
@@ -16,25 +22,28 @@
 }
 
 .contacts__email {
-  width: 219px;
-  margin-left: 12px;
+  box-sizing: border-box;
+  width: 218px;
+  margin-left: 7px;
   margin-bottom: 14px;
 
   text-transform: uppercase;
 }
 
 .contacts__phone {
+  box-sizing: border-box;
   width: 204px;
-  margin-left: 10px;
+  margin-left: 5px;
 
   text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
-    width: @tablet-width;
+    width: 631px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
   }
 
   .contacts__title {
@@ -54,5 +63,14 @@
   .contacts__wrapper {
     width: @desktop-width;
     flex-direction: row;
+    width: 1220px;
+  }
+
+  .contacts__email {
+    width: 486px;
+  }
+
+  .contacts__phone {
+    width: 472px;
   }
 }

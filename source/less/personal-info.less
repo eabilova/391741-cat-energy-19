@@ -1,9 +1,8 @@
 .personal-info {
-  &.program-form__fieldset {
-    padding-bottom: 23px;
+  padding-bottom: 23px;
 
-    border-bottom: 1px solid @outline-color;
-  }
+  border: none;
+  border-bottom: 1px solid @outline-color;
 }
 
 .personal-info__label {
@@ -11,22 +10,23 @@
 }
 
 .personal-info__name {
-  width: 229px;
-  margin-left: 15px;
+  width: 228px;
+  box-sizing: border-box;
+  margin-left: 10px;
   margin-bottom: 14px;
 
   text-transform: uppercase;
 }
 
 .personal-info__weight {
-  width: 204px;
-  margin-left: 18px;
+  width: 199px;
+  margin-left: 13px;
   margin-bottom: 14px;
 }
 
 .personal-info__age {
-  width: 172px;
-  margin-left: 16px;
+  width: 167px;
+  margin-left: 11px;
 }
 
 @media (min-width: @tablet-width) {
@@ -35,10 +35,24 @@
   }
 
   .personal-info__weight {
-    width: 536px;
+    width: 534px;
   }
 
   .personal-info__age {
-    width: 497px;
+    width: 495px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .personal-info__name {
+    width: 506px;
+  }
+
+  .personal-info__weight {
+    width: 475px;
+  }
+
+  .personal-info__age {
+    width: 436px;
   }
 }

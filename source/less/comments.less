@@ -1,3 +1,17 @@
+.comments {
+  border: none;
+  border-top: 3px solid @main-bg-color;
+}
+
+@media (min-width: @mobile-width) and (max-width: 767px) {
+  .comments {
+    padding: 0;
+  }
+}
+
+.comments__title {
+  margin-bottom: 31px;
+}
 .comments__comment-field {
   width: 280px;
   min-height: 150px;
@@ -13,10 +27,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .comments {
-    width: @desktop-width;
-  }
-
   .comments__comment-field {
     width: 1220px;
   }
