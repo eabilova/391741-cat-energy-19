@@ -1,3 +1,29 @@
 .program-list {
+  display: flex;
+  flex-direction: column;
+  width: @mobile-width;
+  padding: 0;
+  margin: 0 auto;
   margin-bottom: 32px;
+
+  list-style-type: none;
+}
+
+.program-list__item {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .program-list {
+    width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-list {
+    width: @desktop-width;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 372px;
+  }
 }

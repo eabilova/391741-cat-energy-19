@@ -2,16 +2,31 @@
   margin-bottom: 13px;
 }
 
+.program-form__title-wrapper {
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
 .program-from__title {
+  width: 226px;
+  margin-left: 20px;
+  margin-top: 35px;
+  margin-bottom: 39px;
+
   text-align: left;
   text-transform: uppercase;
-
-  margin-bottom: 39px;
 }
 
 .program-form__fieldset {
   font-size: 16px;
-  color: #222222;
+  color: @sec-font-color;
+}
+
+.program-form__fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .program-form__fieldset-title {
@@ -19,15 +34,90 @@
   line-height: 24px;
   text-align: left;
   font-weight: normal;
-  color: #111111;
-
-  margin-bottom: 31px;
-  margin-left: 20px;
+  color: @main-font-color;
 }
 
 .program-form__note {
   font-size: 16px;
   text-align: center;
-  color: #444444;
+  color: @arial-font-color;
   font-family: "Arial", sans-serif;
+}
+
+.program-form__button {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .program-form__title-wrapper {
+    width: @tablet-width;
+  }
+
+  .program-from__title {
+    margin-left: 70px;
+  }
+
+  .program-form__fieldset {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program-form__fieldset-title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .program-form__button {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: 1439px) {
+  .program-form__fieldset {
+    width: @tablet-width;
+  }
+
+  .program-form__fieldset-wrapper {
+    width: 631px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-form__wrapper {
+    display: flex;
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .program-form__title-wrapper {
+    width: @desktop-width;
+  }
+
+  .program-from__title {
+    margin-left: 113px;
+  }
+
+  .program-form__fieldset-wrapper {
+    width: 1220px;
+
+    &.shorten__wrapper {
+      width: 610px;
+    }
+  }
+
+  .program-form__fieldset-title {
+    margin-left: 93px;
+  }
+
+  .program-form__button {
+    width: 568px;
+  }
 }

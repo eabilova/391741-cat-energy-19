@@ -1,8 +1,59 @@
+.how-list {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+  list-style-type: none;
+}
+
 .how-list__item {
   margin-bottom: 20px;
-  font-family: "Arial", sans-serif;
+
+  font-family: @arial-font;
+  text-align: left;
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .how-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .how-list__item {
+    display: inline-block;
+    width: 245px;
+    min-height: 240px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: 1439px) {
+  .how-list__item {
+    &:nth-child(2n+1) {
+      margin-right: 140px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .how-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .how-list__item {
+    display: inline-block;
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

@@ -1,4 +1,34 @@
-.comments__comment {
+.comments {
+  border: none;
+  border-top: 3px solid @main-bg-color;
+}
+
+@media (min-width: @mobile-width) and (max-width: 767px) {
+  .comments {
+    padding: 0;
+  }
+}
+
+.comments__title {
+  margin-bottom: 31px;
+}
+
+.comments__comment-field {
+  width: 280px;
+  min-height: 150px;
   margin: 0 auto;
+
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .comments__comment-field {
+    width: 631px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comments__comment-field {
+    width: 1220px;
+  }
 }

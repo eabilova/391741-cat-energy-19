@@ -3,9 +3,18 @@
   padding-top: 14px;
   padding-bottom: 12px;
 
-  color: #ffffff;
+  font-family: @oswald-font;
+  color: @alt-font-color;
   text-align: center;
   text-transform: uppercase;
 
-  background-color: #68b738;
+  background-color: @main-bg-color;
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .button-link {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

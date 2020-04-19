@@ -1,13 +1,16 @@
 .prize-section {
-  padding-top: 65px;
-  padding-bottom: 43px;
+  width: 280px;
+  min-height: 289px;
+  margin: 0 auto;
+  margin-bottom: 35px;
 
-  background-color: #68b738;
+  background-color: @main-bg-color;
 }
 
 .prize-wrapper {
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .prize-section__text {
@@ -15,7 +18,33 @@
 
   font-size: 16px;
   line-height: 20px;
-  color: #ffffff;
+  color: @alt-font-color;
   text-align: center;
-  font-family: "Arial", sans-serif;
+  font-family: @arial-font;
+}
+
+@media (min-width: @tablet-width) {
+  .prize-section {
+    width: 708px;
+    min-height: 200px;
+  }
+
+  .prize-wrapper {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .prize-section {
+    width: 245px;
+    min-height: 289px;
+  }
+
+  .prize-wrapper {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }

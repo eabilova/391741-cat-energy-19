@@ -1,10 +1,24 @@
+@main-font-color: #111111;
+@sec-font-color: #222222;
+@arial-font-color: #444444;
+@alt-font-color: #ffffff;
+@main-bg-color: #68b738;
+@page-bg-color: #f2f2f2;
+@page-wht-bg-color: #ffffff;
+@outline-color: #cdcdcd;
+@arial-font: "Arial", sans-serif;
+@oswald-font: "Oswald", "Arial", sans-serif;
+@mobile-width: 320px;
+@tablet-width: 768px;
+@desktop-width: 1440px;
+
 body {
   font-style: normal;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  font-family: "Oswald", "Arial", sans-serif;
-  color: #111111;
+  font-family: @oswald-font;
+  color: @main-font-color;
 }
 
 .visually-hidden {
@@ -15,31 +29,42 @@ body {
   margin: -1px;
 }
 
-@import "main-menu.less";
-@import "intro-board.less";
-@import "button-link.less";
-@import "program-list.less";
-@import "program-item.less";
-@import "how-works.less";
-@import "how-list.less";
-@import "section-title.less";
-@import "example-section.less";
-@import "result-item.less";
-@import "example-slider.less";
-@import "map-section.less";
-@import "page-footer.less";
-@import "catalog-item.less";
-@import "features-list.less";
-@import "features-item.less";
-@import "show-more.less";
-@import "additions.less";
-@import "additions-item.less";
-@import "additions-info.less";
+@import "additionals.less";
 @import "additions-descr.less";
+@import "additions-info.less";
+@import "additions-item.less";
+@import "additions-list.less";
+@import "additions.less";
+@import "button-link.less";
+@import "catalog.less";
+@import "catalog-item.less";
+@import "catalog-list.less";
+@import "center.less";
+@import "comments.less";
+@import "contacts.less";
+@import "example-section.less";
+@import "example-slider.less";
+@import "features-item.less";
+@import "features-list.less";
+@import "goal.less";
+@import "how-list.less";
+@import "how-works.less";
+@import "intro-board.less";
+@import "main-menu.less";
+@import "main-nav.less";
+@import "map-section.less";
+@import "menu-button.less";
+@import "page-footer.less";
+@import "page-header.less";
+@import "page-main.less";
+@import "personal-info.less";
 @import "prize-section.less";
 @import "program-form.less";
-@import "personal-info.less";
-@import "goal.less";
-@import "contacts.less";
-@import "comments.less";
-@import "additionals.less";
+@import "program-item.less";
+@import "program-list.less";
+@import "result-item.less";
+@import "result-section.less";
+@import "section-title.less";
+@import "send-application.less";
+@import "show-more.less";
+@import "social-list.less";
