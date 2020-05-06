@@ -1,8 +1,29 @@
 .additions-descr {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 90vw;
   font-family: @arial-font;
 }
 
 .additions-descr__value {
   text-align: right;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .additions-descr {
+    width: 100%;
+    padding-top: 3px;
+  }
+
+  .additions-descr__name {
+    width: 61%;
+
+    text-align: right;
+  }
+
+  .additions-descr__value {
+    width: 39%;
+  }
 }

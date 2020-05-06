@@ -1,12 +1,57 @@
+.result-item {
+  position: relative;
+  box-sizing: border-box;
+
+  width: 124px;
+  min-height: 56px;
+  padding-top: 13px;
+
+  border: 1px solid @outline-color;
+}
+
 .result-item__number {
+  margin: 0;
+
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .result-item__description {
+  position: absolute;
+  width: 59px;
+  top: 62%;
+  left: 25%;
+
   font-size: 12px;
   line-height: 12px;
+  text-align: center;
   color: @arial-font-color;
   font-family: @arial-font;
+
+  background-color: @page-bg-color;
+}
+
+@media (min-width: @tablet-width) {
+  .result-item {
+    width: 162px;
+    min-height: 72px;
+  }
+
+  .result-item__number {
+    font-size: 30px;
+    line-height: 37px;;
+  }
+
+  .result-item__description {
+    width: 127px;
+    top: 69%;
+    left: 10%;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: @page-wht-bg-color;
+  }
 }

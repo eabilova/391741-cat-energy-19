@@ -1,10 +1,19 @@
 .additions-item {
-  padding-top: 14px;
-  padding-bottom: 17px;
+  width: 90vw;
+  margin: 0 auto;
+  padding-top: 13px;
+  padding-bottom: 16px;
+  border-top: 1px solid @outline-color;
+
+  &:last-child {
+    border-bottom: 1px solid @outline-color;
+  }
 }
 
 .additions-item__title {
-  margin-bottom: 15px;
+  margin: 0;
+  margin-left: 5px;
+  margin-bottom: 11px;
 
   font-size: 16px;
   line-height: 16px;
@@ -12,6 +21,36 @@
   color: @sec-font-color;
   text-align: left;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .additions-item {
+    width: 92vw;
+    padding-top: 10px;
+    padding-bottom: 12px;
+
+    border: 1px solid @outline-color;
+
+    .catalog-item__button {
+      width: 633px;
+    }
+  }
+
+  .additions-item__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 640px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 9px;
+  }
+
+  .additions-item__title {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 @media (min-width: @desktop-width) {

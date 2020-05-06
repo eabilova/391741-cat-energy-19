@@ -3,7 +3,7 @@
 
   &.program-form__fieldset {
     padding-top: 21px;
-    padding-bottom: 22px;
+    padding-bottom: 5px;
 
     border-bottom: 1px solid @outline-color;
   }
@@ -14,6 +14,59 @@
 }
 
 .goal__radio-button {
+  display: none;
   margin-right: 16px;
   margin-bottom: 13px;
+
+  &+.goal__label {
+    &::before {
+      display: inline-block;
+      vertical-align: -126%;
+      box-sizing: border-box;
+      border-radius: 50%;
+      margin-right: 16px;
+      margin-bottom: 13px;
+
+      content: "";
+      width: 30px;
+      height: 30px;
+      border: solid 1px @outline-color;
+      background-color: transparent;
+    }
+  }
+
+  &:checked+.goal__label::before {
+    background-color: @main-bg-color;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .goal {
+    &.program-form__fieldset {
+      box-sizing: border-box;
+      width: 630px;
+      margin: 0 auto;
+      padding-bottom: 13px;
+      margin-bottom: 55px;
+
+      border: 1px solid @outline-color;
+    }
+  }
+
+  .goal__radio-button {
+    &+.goal__label {
+      &::before {
+        vertical-align: -116%;
+        margin-left: 30px;
+        margin-right: 20px;
+
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &:checked+.goal__label::before {
+      background-color: @main-bg-color;
+    }
+  }
 }

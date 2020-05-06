@@ -1,58 +1,86 @@
 .personal-info {
-  padding-bottom: 23px;
-
   border: none;
   border-bottom: 1px solid @outline-color;
+
+  &.program-form__fieldset {
+    padding-bottom: 23px;
+  }
 }
 
 .personal-info__label {
   text-transform: uppercase;
 }
 
-.personal-info__name {
-  width: 228px;
-  box-sizing: border-box;
-  margin-left: 10px;
-  margin-bottom: 14px;
-
+.personal-info__input {
   text-transform: uppercase;
-}
+  box-sizing: border-box;
+  padding: 12px 0 14px 14px;
+  border: 1px solid  @outline-color;
 
-.personal-info__weight {
-  width: 199px;
-  margin-left: 13px;
-  margin-bottom: 14px;
-}
+  &--name {
+    width: 228px;
+    margin-left: 10px;
+    margin-bottom: 12px;
+  }
 
-.personal-info__age {
-  width: 167px;
-  margin-left: 11px;
+  &--weight {
+    width: 203px;
+    margin-left: 13px;
+    margin-bottom: 14px;
+  }
+
+  &--age {
+    width: 172px;
+    margin-left: 11px;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .personal-info__name {
-    width: 567px;
+  .personal-info {
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 49px;
   }
 
-  .personal-info__weight {
-    width: 534px;
+  .personal-info__label {
+    margin-left: 2px;
   }
 
-  .personal-info__age {
-    width: 495px;
+  .personal-info__input {
+    padding: 12px 0 14px 20px;
+
+    &--name {
+      width: 566px;
+      margin-left: 11px;
+      margin-bottom: 21px;
+    }
+
+    &--weight {
+      width: 534px;
+      margin-left: 14px;
+      margin-bottom: 21px;
+    }
+
+    &--age {
+      width: 495px;
+      margin-left: 12px;
+    }
   }
+
 }
 
 @media (min-width: @desktop-width) {
-  .personal-info__name {
-    width: 506px;
-  }
+  .personal-info__input {
+    &--name {
+      width: 506px;
+    }
 
-  .personal-info__weight {
-    width: 475px;
-  }
+    &--weight {
+      width: 475px;
+    }
 
-  .personal-info__age {
-    width: 436px;
+    &--age {
+      width: 436px;
+    }
   }
 }

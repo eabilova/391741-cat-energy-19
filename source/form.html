@@ -10,31 +10,33 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo" href="">
-          <img class="page-header__logo-image logo-image__main" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип «Кэт Энерджи»">
-        </a>
-        <button class="menu-button">
-          <img class="menu-button__icon" src="img/icon-mobile-menu.svg" width="25" height="19" alt="Открыть">
-        </button>
+      <div class="page-header__big-wrapper">
+        <div class="page-header__wrapper">
+          <a class="page-header__logo" href="index.html">
+            <img class="page-header__logo-image logo-image__main" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип «Кэт Энерджи»">
+          </a>
+          <button class="menu-button">
+            <img class="menu-button__icon" src="img/icon-mobile-menu.svg" width="25" height="19" alt="Открыть">
+          </button>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav__list main-menu">
+            <li class="main-menu__item">
+              <a class="main-menu__item-link" href="index.html">Главная</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__item-link" href="catalog.html">Каталог Продукции</a>
+            </li>
+            <li class="main-menu__item main-menu__item--active">
+              <a class="main-menu__item-link">Подбор Программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list main-menu">
-          <li class="main-menu__item main-menu__item--active">
-            <a class="main-menu__item-link" href="index.html">Главная</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__item-link" href="catalog.html">Каталог Продукции</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="main-menu__item-link">Подбор Программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
     <main class="page-main">
       <div class="section-title__wrapper">
-        <h1 class="section-title page-main__title">Подбор Программы</h1>
+        <h1 class="section-title form-page__title">Подбор программы</h1>
       </div>
       <form class="program-form">
         <div class="program-form__title-wrapper">
@@ -45,28 +47,25 @@
             <legend class="visually-hidden">Персональная информация</legend>
             <div class="program-form__fieldset-wrapper shorten__wrapper">
               <label class="personal-info__label">Имя:*
-              <input class="personal-info__name" type="text" name="cat-name" placeholder="Барсик" required>
+              <input class="personal-info__input personal-info__input--name" type="text" name="cat-name" placeholder="Барсик" required>
               </label>
               <label class="personal-info__label">Вес (кг):*
-                <input class="personal-info__weight" type="number" name="cat-weight" placeholder="7" required>
+                <input class="personal-info__input personal-info__input--weight" type="number" name="cat-weight" placeholder="7" required>
               </label>
               <label class="personal-info__label">Возраст (лет):
-                <input class="personal-info__age" type="number" name="cat-age" placeholder="7" required>
+                <input class="personal-info__input personal-info__input--age" type="number" name="cat-age" placeholder="7" required>
               </label>
             </div>
           </fieldset>
           <fieldset class="program-form__fieldset goal">
             <legend class="visually-hidden">Цель программы</legend>
             <div class="program-form__fieldset-wrapper shorten__wrapper">
-              <label class="goal__label" for="weight-loss">
-              <input class="goal__radio-button" type="radio" id="weight-loss" name="goal-selection" checked>Похудение
-              </label>
-              <label class="goal__label" for="weight-gain">
-                <input class="goal__radio-button" type="radio" id="weight-gain" name="goal-selection">Набор массы
-              </label>
-              <label class="goal__label" for="weight-advice">
-                <input class="goal__radio-button" type="radio" id="weight-advice" name="goal-selection">Не знаю (нужен ваш совет)
-              </label>
+              <input class="goal__radio-button" type="radio" id="weight-loss" name="goal-selection" checked>
+              <label class="goal__label" for="weight-loss">Похудение</label>
+              <input class="goal__radio-button" type="radio" id="weight-gain" name="goal-selection">
+              <label class="goal__label" for="weight-gain">Набор массы</label>
+              <input class="goal__radio-button" type="radio" id="weight-advice" name="goal-selection">
+              <label class="goal__label" for="weight-advice">Не знаю (нужен ваш совет)</label>
             </div>
           </fieldset>
         </div>
@@ -74,10 +73,10 @@
           <legend class="program-form__fieldset-title contacts__title">Контактные данные (владельца кота)</legend>
           <div class="contacts__wrapper">
             <label class="contacts__label" for="your-email">E-mail:*
-              <input class="contacts__email" type="email" name="your-email" id="your-email" placeholder="kuklachev@gmail.com" required>
+              <input class="contacts__input contacts__input--email" type="email" name="your-email" id="your-email" placeholder="kuklachev@gmail.com" required>
             </label>
             <label class="contacts__label" for="your-phone">Телефон:*
-              <input class="contacts__phone" type="tel" name="your-phone" id="your-phone" placeholder="8 (960) 900-60-90">
+              <input class="contacts__input contacts__input--phone" type="tel" name="your-phone" id="your-phone" placeholder="8 (960) 900-60-90">
             </label>
           </div>
         </fieldset>
@@ -91,29 +90,25 @@
         <fieldset class="program-form__fieldset additionals">
           <legend class="program-form__fieldset-title additionals__title">Дополнительно</legend>
           <div class="additionals__wrapper">
-            <label class="additionals__label" for="sugar-change">
-            <input class="additionals__checkbox" type="checkbox" name="sugar-change" id="sugar-change" checked>Сахарозаменитель
-            </label>
-            <label class="additionals__label" for="water">
-              <input class="additionals__checkbox" type="checkbox" name="water" id="water">Питьевая вода
-            </label>
-            <label class="additionals__label" for="milk">
-              <input class="additionals__checkbox" type="checkbox" name="milk" id="milk">Молоко
-            </label>
-            <label class="additionals__label" for="vitamins">
-              <input class="additionals__checkbox" type="checkbox" name="vitamins" id="vitamins">Витамины
-            </label>
+            <input class="additionals__checkbox" type="checkbox" name="sugar-change" id="sugar-change" checked>
+            <label class="additionals__label" for="sugar-change">Сахарозаменитель</label>
+            <input class="additionals__checkbox" type="checkbox" name="water" id="water">
+            <label class="additionals__label" for="water">Питьевая вода</label>
+            <input class="additionals__checkbox" type="checkbox" name="milk" id="milk">
+            <label class="additionals__label" for="milk">Молоко</label>
+            <input class="additionals__checkbox" type="checkbox" name="vitamins" id="vitamins">
+            <label class="additionals__label" for="vitamins">Витамины</label>
           </div>
         </fieldset>
-        <div class="additionals__wrapper">
+        <div class="additionals__button-wrapper">
           <button class="button-link program-form__button">Отправить заявку</button>
-          <p class="program-form__note">*- Обязательные поля</p>
+          <p class="program-form__note">* &#8212; Обязательные поля</p>
         </div>
       </form>
       <section class="map-section inner-map">
         <div class="map-section__wrapper inner-map">
-          <h2 class="map-section__title">Приглашаем к сотрудничеству дилеров</h2>
-          <p class="map-section__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <h2 class="map-section__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
+          <p class="map-section__address">ул. Большая Конюшенная, д. 19/8 <br><span class="map-section__address--city">Санкт-Петербург</span></p>
         </div>
         <iframe class="map-section__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300338!2d30.320858716477954!3d59.93871916905372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1586624167562!5m2!1sru!2sru" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </section>
@@ -126,7 +121,7 @@
         <ul class="page-footer__social-list social-list">
           <li class="social-list__item">
             <a href="#" aria-label="ВКонтакте">
-              <svg class="social-list__item-image social-list__item-image-vk" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
+              <svg class="social-list__item-image social-list__item-image--vk" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
                 <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
                   c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4h-1.4c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
                   s0.8-0.4,1-0.4h3.1c0.1,0,0.4,0.1,0.7,0.3C5.3,1,5.4,1.3,5.5,1.4c0.7,1.5,1.5,2.8,2.6,4C8.2,5,8.3,4,8.2,3.1c0-0.4-0.1-0.8-0.2-1
@@ -145,10 +140,7 @@
           </li>
           <li class="social-list__item">
             <a href="#" aria-label="Instagram">
-              <svg class="social-list__item-image social-list__item-image-insta" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
-                <style type="text/css">
-                  .st0{fill:#231F20;}
-                </style>
+              <svg class="social-list__item-image social-list__item-image--insta" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
                 <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8 M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
                 <path class="st0" d="M8,4.9c1.7,0,3.1,1.4,3.1,3.1S9.7,11.1,8,11.1S4.9,9.7,4.9,8S6.3,4.9,8,4.9 M8,3.9C5.7,3.9,3.9,5.7,3.9,8 s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9z"/>
                 <circle class="st0" cx="12.3" cy="3.7" r="0.9"/>
@@ -157,13 +149,15 @@
           </li>
           <li class="social-list__item">
             <a href="#" aria-label="Facebook">
-              <svg class="social-list__item-image social-list__item-image-fb" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
+              <svg class="social-list__item-image social-list__item-image--fb" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
                 <path d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18 h2.8V9.1h2.9V6.8H5.9V6.3c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6H1.1v2.3h2V18 z"/>
                 </svg>
             </a>
           </li>
         </ul>
-        <a class="page-footer__contact" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="page-footer__contact" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+          <svg class="page-footer__contact-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+        </a>
       </div>
     </footer>
   </body>
