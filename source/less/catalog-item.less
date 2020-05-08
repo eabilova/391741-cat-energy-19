@@ -45,16 +45,20 @@
   line-height: 20px;
 }
 
+@media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+  .catalog-item {
+    &:nth-child(2n+1) {
+      margin-right: 60px;
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .catalog-item {
     margin-bottom: 58px;
 
     border: 1px solid @sec-outline-color;
     background-color: @page-bg-color;
-
-    &:nth-child(2n+1) {
-      margin-right: 60px;
-    }
   }
 
   .catalog-item__link {
@@ -87,12 +91,28 @@
 
 @media (min-width: @desktop-width) {
   .additions-item {
-    .catalog-item__button {
+    &.catalog-item__button {
       width: 245px;
+    }
+  }
+
+  .catalog-item {
+    margin-bottom: 49px;
+
+    &:nth-child(4n+1) {
+      margin-left: 10px;
     }
   }
 
   .catalog-item__link {
     width: 245px;
+  }
+
+  .catalog-item__image {
+    margin-bottom: 48px;
+  }
+
+  .catalog-item__button {
+    width: 169px;
   }
 }

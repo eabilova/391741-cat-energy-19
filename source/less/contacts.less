@@ -9,14 +9,6 @@
   }
 }
 
-.contacts__wrapper {
-  display: flex;
-  flex-direction: column;
-  // width: 282px;
-  width: 89vw;
-  margin: 0 auto;
-}
-
 .contacts__title {
   display: inline-block;
   vertical-align: bottom;
@@ -27,6 +19,13 @@
   padding-right: 21px;
   margin-bottom: 35px;
   width: 217px;
+}
+
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 89vw;
+  margin: 0 auto;
 }
 
 .contacts__label {
@@ -91,9 +90,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .contacts {
+    &.program-form__fieldset {
+      padding-bottom: 9px;
+    }
+  }
+
+  .contacts__title {
+    padding-top: 0;
+  }
+
   .contacts__wrapper {
     flex-direction: row;
-    width: 1220px;
+    justify-content: space-between;
+    width: 1233px;
   }
 
   .contacts__input {
@@ -102,7 +112,8 @@
     }
 
     &--phone {
-      width: 472px;
+      width: 487px;
+      margin-left: 10px;
     }
   }
 }

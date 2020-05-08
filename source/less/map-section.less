@@ -77,11 +77,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .map-section {
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 400px;
+  }
+
   .map-section__wrapper {
     position: absolute;
-    margin-top: 95px;
-    left: 220px;
+    left: 111px;
     z-index: 2;
+
+    justify-content: space-evenly;
+    margin-top: 97px;
+    padding-top: 49px;
     width: 570px;
 
     &.inner-map {
@@ -89,7 +98,13 @@
     }
   }
 
+  .map-section__address {
+    width: 30%;
+    text-align: left;
+  }
+
   .map-section__image {
     min-width: @desktop-width;
+    min-height: 400px;
   }
 }
