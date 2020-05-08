@@ -28,7 +28,7 @@
   margin-right: 16px;
   margin-bottom: 13px;
 
-  &+.additionals__label {
+  & +.additionals__label {
     &::before {
       display: inline-block;
       vertical-align: -127%;
@@ -44,7 +44,7 @@
     }
   }
 
-  &:checked+.additionals__label::before {
+  &:checked + .additionals__label::before {
     background-image: url("../img/icon-tick.svg");
     background-size: 22px 17px;
     background-repeat: no-repeat;
@@ -83,7 +83,7 @@
   }
 
   .additionals__checkbox {
-    &+.additionals__label {
+    & + .additionals__label {
       margin-right: 30px;
 
       &::before {
@@ -128,7 +128,7 @@
   }
 
   .additionals__checkbox {
-    &+.additionals__label {
+    & + .additionals__label {
       margin-right: 21px;
 
       &:last-of-type {

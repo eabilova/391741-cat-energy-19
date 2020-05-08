@@ -18,7 +18,7 @@
   margin-right: 16px;
   margin-bottom: 13px;
 
-  &+.goal__label {
+  & + .goal__label {
     &::before {
       display: inline-block;
       vertical-align: -126%;
@@ -35,7 +35,7 @@
     }
   }
 
-  &:checked+.goal__label::before {
+  &:checked + .goal__label::before {
     background-color: @main-bg-color;
   }
 }
@@ -55,7 +55,7 @@
   }
 
   .goal__radio-button {
-    &+.goal__label {
+    & + .goal__label {
       &::before {
         vertical-align: -116%;
         margin-left: 30px;
@@ -66,7 +66,7 @@
       }
     }
 
-    &:checked+.goal__label::before {
+    &:checked + .goal__label::before {
       background-color: @main-bg-color;
     }
   }
