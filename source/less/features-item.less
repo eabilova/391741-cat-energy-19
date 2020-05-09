@@ -1,3 +1,9 @@
+.features-item {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+}
+
 .features-item__name {
   text-align: left;
 }
@@ -8,4 +14,15 @@
 
 .features-item__value--price {
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .features-item {
+    box-sizing: content-box;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid @outline-color;
+  }
 }

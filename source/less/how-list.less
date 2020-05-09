@@ -3,40 +3,187 @@
   flex-direction: column;
 
   padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
 .how-list__item {
+  display: block;
+  box-sizing: border-box;
+  width: 87.5%;
+  margin: 0 auto;
   margin-bottom: 20px;
 
   font-family: @arial-font;
   text-align: left;
 
-  &:last-child {
-    margin-bottom: 0;
+  // &:last-child {
+  //   margin-bottom: 0;
+  // }
+
+  &::before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 16px;
+    width: 60px;
+    height: 60px;
+
+    content: "";
+    background-color: @main-bg-color;
+    background-repeat: no-repeat;
+    background-size: 78%;
+    background-position: center center;
+  }
+
+  &--nutritions {
+    &::before {
+      background-image: url("../img/advantage-leaf@1x.png");
+    }
+  }
+
+  &--powder {
+    &::before {
+      background-image: url("../img/advantage-powder@1x.png");
+    }
+  }
+
+  &--replace {
+    &::before {
+      background-image: url("../img/advantage-dining@1x.png");
+    }
+  }
+
+  &--changes {
+    &::before {
+      background-image: url("../img/advantage-clock@1x.png");
+    }
+  }
+}
+
+.how-list__item-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  width: 70%;
+}
+
+@media (max-width: @mobile-width-only) {
+  .how-list__item {
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 @media (min-width: @tablet-width) {
   .how-list {
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
+
+    border-bottom: 1px solid @outline-color;
   }
 
   .how-list__item {
     display: inline-block;
     width: 245px;
     min-height: 240px;
+    margin-left: 29px;
+    margin-bottom: 77px;
 
     font-size: 16px;
     line-height: 24px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 33px;
+      background-size: 66%;
+    }
+
+    &--replace {
+      margin-bottom: 47px;
+    }
+
+    &--changes {
+      margin-bottom: 47px;
+    }
+  }
+
+  .how-list__item-text {
+    position: relative;
+    width: 100%;
+    z-index: 3;
+
+    &::after {
+      position: absolute;
+      display: inline-block;
+      vertical-align: top;
+
+      color: @page-bg-color;
+      font-family: @oswald-font;
+
+      z-index: -1;
+    }
+
+    &--nutritions {
+      &::after {
+        width: 71px;
+        bottom: 70px;
+        right: 55px;
+
+        content: "1";
+        color: @page-bg-color;
+        font-family: @oswald-font;
+        font-size: 281px;
+      }
+    }
+
+    &--powder {
+      &::after {
+        width: 71px;
+        bottom: 70px;
+        right: 60px;
+
+        content: "2";
+        color: @page-bg-color;
+        font-family: @oswald-font;
+        font-size: 281px;
+      }
+    }
+
+    &--replace {
+      &::after {
+        width: 71px;
+        bottom: 70px;
+        right: 60px;
+
+        content: "3";
+        color: @page-bg-color;
+        font-family: @oswald-font;
+        font-size: 281px;
+      }
+    }
+
+    &--changes {
+      &::after {
+        width: 71px;
+        bottom: 70px;
+        right: 60px;
+
+        content: "4";
+        color: @page-bg-color;
+        font-family: @oswald-font;
+        font-size: 281px;
+      }
+    }
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: 1439px) {
+@media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
   .how-list__item {
     &:nth-child(2n+1) {
-      margin-right: 140px;
+      margin-right: 110px;
     }
   }
 }
@@ -46,14 +193,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    border-bottom: none;
   }
 
   .how-list__item {
     display: inline-block;
-    margin-right: 80px;
+    margin-right: -8px;
+    margin-bottom: 0;
 
-    &:last-child {
-      margin-right: 0;
+    &:first-child {
+      margin-left: 8px;
     }
   }
 }

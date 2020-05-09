@@ -1,3 +1,7 @@
+.example-slider {
+  min-height: 320px;
+}
+
 .example-slider__was,
 .example-slider__is {
   font-size: 16px;
@@ -12,7 +16,14 @@
 
 @media (min-width: @tablet-width) {
   .example-slider {
-    width: @tablet-width;
+    width: 92vw;
+    min-height: 460px;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example-slider {
+    width: 100%;
   }
 }

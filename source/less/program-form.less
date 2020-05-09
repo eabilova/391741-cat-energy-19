@@ -10,7 +10,6 @@
 .program-from__title {
   width: 226px;
   margin-left: 20px;
-  margin-top: 35px;
   margin-bottom: 39px;
 
   text-align: left;
@@ -18,6 +17,7 @@
 }
 
 .program-form__fieldset {
+  padding: 0;
   font-size: 16px;
   color: @sec-font-color;
 }
@@ -25,7 +25,7 @@
 .program-form__fieldset-wrapper {
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: 87.5vw;
   margin: 0 auto;
 }
 
@@ -38,7 +38,11 @@
 }
 
 .program-form__note {
-  font-size: 16px;
+  margin: 0;
+  margin-bottom: 34px;
+
+  font-size: 14px;
+  line-height: 16px;
   text-align: center;
   color: @arial-font-color;
   font-family: "Arial", sans-serif;
@@ -48,6 +52,7 @@
   display: block;
   width: 280px;
   margin: 0 auto;
+  margin-bottom: 21px;
 
   font-weight: normal;
   font-size: 16px;
@@ -60,7 +65,12 @@
   }
 
   .program-from__title {
+    width: 323px;
     margin-left: 70px;
+    margin-bottom: 66px;
+
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .program-form__fieldset {
@@ -74,15 +84,27 @@
   }
 
   .program-form__button {
+    width: 283px;
     margin: 0;
+    margin-right: 63px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
     font-size: 20px;
     line-height: 20px;
   }
+
+  .program-form__note {
+    margin-bottom: 0;
+    margin-top: 16px;
+
+    font-size: 16px;
+  }
 }
 
-@media (min-width: @tablet-width) and (max-width: 1439px) {
+@media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
   .program-form__fieldset {
-    width: @tablet-width;
+    width: 100vw;
   }
 
   .program-form__fieldset-wrapper {
@@ -95,6 +117,7 @@
     display: flex;
     width: 1220px;
     margin: 0 auto;
+    margin-bottom: 27px;
   }
 
   .program-form__title-wrapper {
@@ -102,11 +125,11 @@
   }
 
   .program-from__title {
-    margin-left: 113px;
+    margin-left: 111px;
   }
 
   .program-form__fieldset-wrapper {
-    width: 1220px;
+    width: 1174px;
 
     &.shorten__wrapper {
       width: 610px;
@@ -114,10 +137,16 @@
   }
 
   .program-form__fieldset-title {
-    margin-left: 93px;
+    margin-left: 41px;
   }
 
   .program-form__button {
     width: 568px;
+    margin-left: 10px;
+    margin-right: 80px;
+  }
+
+  .program-form__note {
+    width: 179px;
   }
 }

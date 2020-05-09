@@ -1,35 +1,106 @@
 .additionals {
   border: none;
   border-top: 3px solid @main-bg-color;
+
+  margin-bottom: 18px;
 }
 
 .additionals__wrapper {
-  display: flex;
-  flex-direction: column;
   width: 280px;
   margin: 0 auto;
 }
 
+.additionals__button-wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.additionals__title {
+  box-sizing: border-box;
+  padding-left: 17px;
+  margin-bottom: 35px;
+  width: 182px;
+}
+
 .additionals__checkbox {
+  display: none;
+
   margin-right: 16px;
   margin-bottom: 13px;
+
+  & + .additionals__label {
+    &::before {
+      display: inline-block;
+      vertical-align: -127%;
+      box-sizing: border-box;
+      margin-right: 16px;
+      margin-bottom: 13px;
+
+      content: "";
+      width: 30px;
+      height: 30px;
+      border: solid 1px @outline-color;
+      background-color: transparent;
+    }
+  }
+
+  &:checked + .additionals__label::before {
+    background-image: url("../img/icon-tick.svg");
+    background-size: 22px 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .additionals__label {
+  display: block;
   text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
+  .additionals {
+    &.program-form__fieldset {
+      padding-left: 30px;
+    }
+  }
+
+  .additionals__title {
+    width: 290px;
+    padding-left: 38px;
+    margin-bottom: 56px;
+  }
+
   .additionals__wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 638px;
+    width: 693px;
     margin: 0 auto;
   }
 
   .additionals__label {
     width: 315px;
+  }
+
+  .additionals__checkbox {
+    & + .additionals__label {
+      margin-right: 30px;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+        vertical-align: -45px;
+        margin-bottom: 34px;
+        margin-right: 18px;
+      }
+    }
+  }
+
+  .additionals__button-wrapper {
+    display: flex;
+    width: 693px;
+    margin: 0 auto;
+    margin-bottom: 72px;
   }
 }
 
@@ -39,10 +110,30 @@
   }
 
   .additionals__wrapper {
+    width: 1289px;
+    margin-bottom: 10px;
+  }
+
+  .additionals__button-wrapper {
     width: 1220px;
+    margin-bottom: 79px;
+  }
+
+  .additionals__title {
+    margin-bottom: 58px;
   }
 
   .additionals__label {
     width: 305px;
+  }
+
+  .additionals__checkbox {
+    & + .additionals__label {
+      margin-right: 21px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
 }

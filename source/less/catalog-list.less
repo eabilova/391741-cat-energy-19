@@ -1,6 +1,7 @@
 .catalog-list {
   display: flex;
   flex-direction: column;
+  padding: 0;
 
   list-style-type: none;
 }
@@ -9,5 +10,17 @@
   .catalog-list {
     flex-direction: row;
     flex-wrap: wrap;
+
+    width: 92.5vw;
+    margin: 0 auto;
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-list {
+    width: 100%;
+    margin-bottom: 17px;
+    justify-content: space-between;
   }
 }
