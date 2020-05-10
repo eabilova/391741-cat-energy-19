@@ -40,7 +40,6 @@
   border: 1px solid @outline-color;
 
   &--email {
-    // width: 218px;
     width: 69vw;
     margin-left: 8px;
     margin-bottom: 14px;
@@ -55,13 +54,12 @@
 @media (min-width: @tablet-width) {
   .contacts {
     &.program-form__fieldset {
-      padding-left: 30px;
       margin-bottom: 37px;
     }
   }
 
   .contacts__wrapper {
-    width: 697px;
+    width: 640px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -69,8 +67,10 @@
 
   .contacts__title {
     width: 590px;
-    padding-left: 34px;
-    margin-bottom: 76px;
+    padding-top: 0;
+    padding-left: 39px;
+    margin-left: 25px;
+    margin-bottom: 65px;
   }
 
   .contacts__input {
@@ -85,7 +85,13 @@
 
     &--phone {
       width: 537px;
-      margin-left: 8px;
+      margin-left: 9px;
+    }
+  }
+
+  .contacts__label {
+    &:first-of-type {
+      margin-left: 2px;
     }
   }
 }
@@ -99,22 +105,31 @@
 
   .contacts__title {
     padding-top: 0;
+    margin-left: 65px;
   }
 
   .contacts__wrapper {
     flex-direction: row;
     justify-content: space-between;
-    width: 1233px;
+    width: 1220px;
   }
 
   .contacts__input {
+    padding-left: 17px;
+
     &--email {
       width: 486px;
     }
 
     &--phone {
-      width: 487px;
-      margin-left: 10px;
+      width: 472px;
+      margin-left: 13px;
+    }
+  }
+
+  .contacts__label {
+    &:first-of-type {
+      margin-left: 0px;
     }
   }
 }

@@ -6,54 +6,24 @@
   background-color: @page-bg-color;
 
   &:first-child {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 }
 
 .program-item__title {
   margin: 0;
   margin-top: 3px;
-  margin-bottom: 19px;
+  margin-bottom: 21px;
 
   font-weight: normal;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-
-  &::before {
-    display: inline-block;
-    vertical-align: middle;
-
-    content: "";
-    width: 50px;
-    height: 51px;
-    margin-right: 20px;
-    background-color: @main-bg-color;
-    border-radius: 50%;
-  }
-
-  &--slim {
-    &::before {
-      background-image: url("../img/icon-cat-slim.svg");
-      background-size: 35px 49px;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-
-  &--pro {
-    &::before {
-      background-image: url("../img/icon-cat-pro.svg");
-      background-size: 67px 28px;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
 }
 
 .program-item__description {
   margin: 0;
-  padding-bottom: 23px;
+  padding-bottom: 22px;
 
   color: @arial-font-color;
   font-family: @arial-font;
@@ -63,7 +33,7 @@
 
 .program-item__link {
   display: inline-block;
-  margin-top: 17px;
+  margin-top: 19px;
 
   font-size: 16px;
   line-height: 16px;
@@ -74,13 +44,59 @@
 
   &::after {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: baseline;
     width: 25px;
     height: 12px;
     margin-left: 12px;
 
     content: "";
     background: url("../img/icon-right-arrow-long.svg") no-repeat;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .program-item__title {
+    &::after {
+      display: inline-block;
+      vertical-align: middle;
+
+      content: "";
+    }
+
+    &--slim {
+      &::after {
+        width: 35px;
+        height: 48px;
+        margin-left: -170px;
+
+        background-image: url("../img/icon-cat-slim.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--pro {
+      &::after {
+        width: 67px;
+        height: 28px;
+        margin-left: -215px;
+        background-image: url("../img/icon-cat-pro.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+
+      content: "";
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+      margin-left: 2px;
+
+      background-color: @main-bg-color;
+      border-radius: 50%;
+    }
   }
 }
 
@@ -93,7 +109,7 @@
     width: 92vw;
 
     &:first-child {
-      margin-bottom: 31px;
+      margin-bottom: 30px;
     }
   }
 
@@ -120,43 +136,13 @@
 
     border-bottom: none;
 
-    // &::after {
-    //   display: inline-block;
-    //   vertical-align: top;
-    //   margin-left: 350px;
-
-    //   content: "";
-    //   width: 200px;
-    //   height: 200px;
-    //   background-color: @main-bg-color;
-    //   border-radius: 50%;
-    // }
-
-    // &--slim {
-    //   &::after {
-    //     background-image: url("../img/icon-cat-slim.svg");
-    //     background-size: 141px 194px;
-    //     background-repeat: no-repeat;
-    //     background-position: center;
-    //   }
-    // }
-
-    // &--pro {
-    //   &::after {
-    //     background-image: url("../img/icon-cat-pro.svg");
-    //     background-size: 268px 113px;
-    //     background-repeat: no-repeat;
-    //     background-position: center;
-    //   }
-    // }
-
     &--pro {
-      width: 45vw;
+      width: 44.8vw;
     }
   }
 
   .program-item__link {
-    margin-top: 33px;
+    margin-top: 10px;
 
     font-size: 20px;
     line-height: 20px;
@@ -167,6 +153,10 @@
       margin-left: 23px;
     }
   }
+}
+
+@media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+// для иконок программы
 }
 
 @media (min-width: @desktop-width) {
@@ -183,38 +173,55 @@
 
   .program-item__description {
     width: 462px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
 
   .program-item__title {
     margin-bottom: 38px;
 
-    &::before {
+    &::after {
       display: inline-block;
-      vertical-align: center;
+      vertical-align: middle;
 
       content: "";
-      width: 100px;
-      height: 100px;
-      margin-right: 61px;
-      background-color: @main-bg-color;
-      border-radius: 50%;
     }
 
     &--slim {
-      &::before {
-        background-size: 71px 97px;
+      &::after {
+        width: 71px;
+        height: 97px;
+        margin-left: -312px;
+        margin-top: -19px;
+
+        background-image: url("../img/icon-cat-slim.svg");
         background-repeat: no-repeat;
-        background-position: center;
       }
     }
 
     &--pro {
-      &::before {
-        background-size: 134px 57px;
+      &::after {
+        width: 134px;
+        height: 57px;
+        margin-left: -385px;
+        margin-top: -2px;
+
+        background-image: url("../img/icon-cat-pro.svg");
         background-repeat: no-repeat;
-        background-position: center;
       }
+    }
+
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+
+      content: "";
+      width: 100px;
+      height: 100px;
+      margin-right: 60px;
+      margin-left: 2px;
+
+      background-color: @main-bg-color;
+      border-radius: 50%;
     }
   }
 

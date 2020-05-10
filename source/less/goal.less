@@ -3,7 +3,7 @@
 
   &.program-form__fieldset {
     padding-top: 21px;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
 
     border-bottom: 1px solid @outline-color;
   }
@@ -21,17 +21,18 @@
   & + .goal__label {
     &::before {
       display: inline-block;
-      vertical-align: -126%;
+      vertical-align: -125%;
       box-sizing: border-box;
       border-radius: 50%;
       margin-right: 16px;
       margin-bottom: 13px;
 
       content: "";
-      width: 30px;
-      height: 30px;
-      border: solid 1px @outline-color;
-      background-color: transparent;
+      width: 29px;
+      height: 29px;
+      border: 9px solid @page-wht-bg-color;
+      background-color: @page-wht-bg-color;
+      box-shadow: 0 0 5px rgba(0,0,0,0.5);
     }
   }
 
@@ -46,9 +47,9 @@
       box-sizing: border-box;
       width: 570px;
       margin: 0 auto;
-      padding-bottom: 13px;
-      margin-bottom: 42px;
-      margin-left: 40px;
+      padding-top: 24px;
+      padding-bottom: 10px;
+      margin-bottom: 60px;
 
       border: 1px solid @outline-color;
     }
@@ -57,9 +58,9 @@
   .goal__radio-button {
     & + .goal__label {
       &::before {
-        vertical-align: -116%;
-        margin-left: 30px;
-        margin-right: 18px;
+        vertical-align: -128%;
+        margin-left: 31px;
+        margin-right: 19px;
 
         width: 40px;
         height: 40px;
@@ -67,7 +68,24 @@
     }
 
     &:checked + .goal__label::before {
-      background-color: @main-bg-color;
+      border: 12px solid @page-wht-bg-color;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .goal {
+    &.program-form__fieldset {
+      margin: 0;
+      margin-bottom: 62px;
+    }
+  }
+
+  .goal__radio-button {
+    & + .goal__label {
+      &::before {
+        margin-left: 28px;
+      }
     }
   }
 }

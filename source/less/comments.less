@@ -31,28 +31,38 @@
 @media (min-width: @tablet-width) {
   .comments {
     &.program-form__fieldset {
-      padding-left: 30px;
       margin-bottom: 66px;
     }
   }
 
   .comments__title {
     width: 255px;
-    padding-left: 36px;
-    margin-bottom: 75px;
+    padding-left: 40px;
+    margin-left: 26px;
+    margin-bottom: 65px;
   }
 
   .comments__comment-field {
     width: 631px;
     min-height: 174px;
-    margin-left: -30px;
     padding-top: 15px;
     padding-left: 18px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .comments {
+    &.program-form__fieldset {
+      margin-bottom: 69px;
+    }
+  }
+
   .comments__comment-field {
     width: 1220px;
+  }
+
+  .comments__title {
+    padding-left: 37px;
+    margin-left: 70px;
   }
 }

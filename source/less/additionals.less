@@ -5,6 +5,16 @@
   margin-bottom: 18px;
 }
 
+.additionals__title {
+  display: inline-block;
+  vertical-align: bottom;
+
+  box-sizing: border-box;
+  padding-left: 17px;
+  margin-bottom: 35px;
+  width: 182px;
+}
+
 .additionals__wrapper {
   width: 280px;
   margin: 0 auto;
@@ -13,13 +23,6 @@
 .additionals__button-wrapper {
   width: 280px;
   margin: 0 auto;
-}
-
-.additionals__title {
-  box-sizing: border-box;
-  padding-left: 17px;
-  margin-bottom: 35px;
-  width: 182px;
 }
 
 .additionals__checkbox {
@@ -58,34 +61,28 @@
 }
 
 @media (min-width: @tablet-width) {
-  .additionals {
-    &.program-form__fieldset {
-      padding-left: 30px;
-    }
-  }
-
   .additionals__title {
     width: 290px;
     padding-left: 38px;
-    margin-bottom: 56px;
+    margin-left: 30px;
+    margin-bottom: 46px;
   }
 
   .additionals__wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
-    width: 693px;
+    width: 631px;
     margin: 0 auto;
   }
 
   .additionals__label {
-    width: 315px;
+    width: 287px;
   }
 
   .additionals__checkbox {
     & + .additionals__label {
-      margin-right: 30px;
-
       &::before {
         width: 40px;
         height: 40px;
@@ -98,19 +95,16 @@
 
   .additionals__button-wrapper {
     display: flex;
-    width: 693px;
+    width: 628px;
     margin: 0 auto;
     margin-bottom: 72px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .additionals {
-    width: @desktop-width;
-  }
-
   .additionals__wrapper {
-    width: 1289px;
+    justify-content: space-between;
+    width: 1220px;
     margin-bottom: 10px;
   }
 
@@ -120,20 +114,17 @@
   }
 
   .additionals__title {
-    margin-bottom: 58px;
+    width: 292px;
+    padding-left: 39px;
+    margin-left: 68px;
+    margin-bottom: 46px;
   }
 
   .additionals__label {
-    width: 305px;
+    width: 220px;
   }
 
-  .additionals__checkbox {
-    & + .additionals__label {
-      margin-right: 21px;
-
-      &:last-of-type {
-        margin-right: 0;
-      }
-    }
+  .additionals__checkbox + .additionals__label {
+    margin-right: 25px;
   }
 }

@@ -44,11 +44,15 @@
 }
 
 @media (min-width: @tablet-width) {
+  .map-section {
+    padding-top: 0;
+  }
+
   .map-section__wrapper {
     justify-content: space-between;
     width: 81.5vw;
-    padding-top: 36px;
-    padding-bottom: 42px;
+    padding-top: 48px;
+    padding-bottom: 40px;
   }
 
   .map-section__title {
@@ -73,6 +77,7 @@
 
   .map-section__image {
     min-width: @tablet-width;
+    min-height: 400px;
   }
 }
 
@@ -104,7 +109,7 @@
   }
 
   .map-section__image {
-    min-width: @desktop-width;
+    min-width: 98vw;
     min-height: 400px;
   }
 }
