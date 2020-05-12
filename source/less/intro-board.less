@@ -86,11 +86,16 @@
   }
 }
 
+@media (min-width: @tablet-width) and (min-resolution: @retina-dpi), (min-width: @tablet-width) and (min-resolution: @retina-dppx) {
+  .intro-board {
+    background-image: url("../img/index-can-tablet@2x.jpg");
+  }
+}
+
 @media (min-width: @desktop-width) {
   .intro-board {
     width: @desktop-width;
     padding-top: 0;
-    margin: 0 auto;
     min-height: 696px;
     margin-bottom: 80px;
 
