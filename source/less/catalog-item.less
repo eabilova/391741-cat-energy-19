@@ -13,19 +13,15 @@
   justify-content: space-around;
   width: 87.5vw;
   margin: 0 auto;
+  box-sizing: border-box;
 
   text-decoration: none;
 }
 
-.catalog-item__image {
-  width: 140px;
-  height: 144px;
-}
-
 .catalog-item__title {
   margin: 0;
-  margin-top: 22px;
-  margin-bottom: 13px;
+  margin-top: 20px;
+  margin-bottom: 14px;
   width: 74px;
 
   font-size: 16px;
@@ -40,6 +36,7 @@
   display: block;
   width: 280px;
   margin: 0 auto;
+  margin-top: -3px;
 
   font-size: 16px;
   line-height: 20px;
@@ -48,21 +45,28 @@
 @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
   .catalog-item {
     &:nth-child(2n+1) {
-      margin-right: 60px;
+      margin-right: 58px;
     }
   }
 }
 
 @media (min-width: @tablet-width) {
   .catalog-item {
-    margin-bottom: 58px;
+    position: relative;
+    min-height: 429px;
+    margin-bottom: 59px;
+    margin-top: 83px;
 
-    border: 1px solid @sec-outline-color;
+    border: none;
     background-color: @page-bg-color;
+
+    &:first-child {
+      border: none;
+    }
   }
 
   .catalog-item__link {
-    width: 323px;
+    width: 326px;
 
     flex-direction: column;
     align-items: center;
@@ -74,9 +78,23 @@
   }
 
   .catalog-item__image {
-    width: 195px;
-    height: 208px;
-    margin-bottom: 36px;
+    position: absolute;
+    left: 0;
+    width: 324px;
+
+    &--small {
+      height: 172px;
+      top: -47px;
+    }
+
+    &--big {
+      height: 208px;
+      top: -83px;
+    }
+  }
+
+  .catalog-item__features {
+    margin-top: 161px;
   }
 
   .catalog-item__title {
@@ -97,11 +115,9 @@
   }
 
   .catalog-item {
+    padding-bottom: 20px;
+    margin-top: 92px;
     margin-bottom: 49px;
-
-    &:nth-child(4n+1) {
-      margin-left: 10px;
-    }
   }
 
   .catalog-item__link {
@@ -109,10 +125,23 @@
   }
 
   .catalog-item__image {
-    margin-bottom: 48px;
+    width: 245px;
+
+    &--small {
+      top: -42px;
+    }
+
+    &--big {
+      top: -78px;
+    }
   }
 
   .catalog-item__button {
     width: 169px;
+    margin-bottom: 18px;
+  }
+
+  .catalog-item__features {
+    margin-top: 166px;
   }
 }

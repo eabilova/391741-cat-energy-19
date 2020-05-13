@@ -39,7 +39,7 @@
   width: 280px;
   margin: 0 auto;
   margin-top: 301px;
-  padding-bottom: 11px;
+  padding-top: 12px;
 
   text-decoration: none;
 }
@@ -86,10 +86,16 @@
   }
 }
 
+@media (min-width: @tablet-width) and (min-resolution: @retina-dpi), (min-width: @tablet-width) and (min-resolution: @retina-dppx) {
+  .intro-board {
+    background-image: url("../img/index-can-tablet@2x.jpg");
+  }
+}
+
 @media (min-width: @desktop-width) {
   .intro-board {
-    padding-top: 0;
     width: @desktop-width;
+    padding-top: 0;
     min-height: 696px;
     margin-bottom: 80px;
 
@@ -97,7 +103,7 @@
 
     background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg");
     background-size: 552px 499px, 720px 696px;
-    background-position: 560px 142px, top right;
+    background-position: 560px 142px, right top;
   }
 
   .intro-board__wrapper {

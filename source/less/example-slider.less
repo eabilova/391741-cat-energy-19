@@ -2,6 +2,14 @@
   min-height: 320px;
 }
 
+.example-slider__image {
+  margin-left: 0;
+}
+
+.example-slider__was {
+  margin-left: 8px;
+}
+
 .example-slider__was,
 .example-slider__is {
   font-size: 16px;
@@ -12,18 +20,103 @@
 
 .example-slider__toggle {
   display: flex;
+  width: 210px;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+
+.example-slider__line {
+  width: 84px;
+  height: 14px;
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-top: 20px;
+  padding: 3px 6px;
+
+  box-sizing: border-box;
+
+  background-color: @page-wht-bg-color;
+  border: 1px solid @outline-color;
+  border-radius: 6px;
+}
+
+.example-slider__inner-element {
+  width: 35px;
+  height: 6px;
+
+  background-color: @main-bg-color;
+  border-radius: 3px;
 }
 
 @media (min-width: @tablet-width) {
   .example-slider {
+    position: relative;
     width: 92vw;
     min-height: 460px;
     margin: 0 auto;
+  }
+
+  .example-slider__toggle {
+    position: absolute;
+    width: 586px;
+    bottom: 46px;
+    left: 8.5%;
+  }
+
+  .example-slider__was,
+  .example-slider__is {
+    padding-bottom: 7px;
+
+    font-size: 20px;
+    border-bottom: 1px dotted @outline-color;
+  }
+
+  .example-slider__line {
+    width: 428px;
+    height: 6px;
+    padding: 0;
+    margin-left: 24px;
+    margin-right: 21px;
+    margin-top: 29px;
+
+    background-color: #dcdcdc;
+  }
+
+  .example-slider__inner-element {
+    width: 33px;
+    height: 33px;
+    margin-left: 46%;
+    margin-top: -15px;
+
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 13px solid @page-bg-color;
+    background-color: @main-bg-color;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .example-slider__image {
+    position: absolute;
+    bottom: 112px;
+    left: 17px;
+    width: 685px;
+    height: 517px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example-slider {
     width: 100%;
+  }
+
+  .example-slider__toggle {
+    left: 24px;
+    bottom: 45px;
+  }
+
+  .example-slider__image {
+    position: absolute;
+    bottom: 132px;
+    left: -47px;
   }
 }

@@ -4,13 +4,7 @@
 
 .example-section__wrapper {
   padding-top: 18px;
-}
-
-@media (max-width: @mobile-width-only) {
-  .example-section__wrapper {
-    width: 87.3vw;
-    margin: 0 auto;
-  }
+  padding-bottom: 12px;
 }
 
 .example-section__description {
@@ -22,10 +16,17 @@
 }
 
 .example-section__price {
-  margin-bottom: 44px;
+  margin-bottom: 32px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (max-width: @mobile-width-only) {
+  .example-section__column-one {
+    width: 87.3vw;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -33,9 +34,14 @@
     background-color: @page-wht-bg-color;
   }
 
+  .example-section__wrapper {
+    padding-bottom: 0;
+  }
+
   .example-section__description {
-    width: 92vw;
-    margin-bottom: 34px;
+    width: 91.4vw;
+    margin-left: 0;
+    margin-bottom: 38px;
 
     font-size: 16px;
     line-height: 24px;
@@ -61,7 +67,7 @@
 
   .example-section__price {
     width: 25%;
-    margin-top: 23px;
+    margin-top: 12px;
 
     font-size: 20px;
     line-height: 30px;
@@ -82,14 +88,14 @@
   .example-section__column-wrapper {
     display: flex;
     justify-content: space-between;
-    width: 1220px;
+    width: 1250px;
     margin: 0 auto;
   }
 
   .example-section__description {
     width: 431px;
-    margin-left: 10px;
-    margin-top: 72px;
+    margin-left: 8px;
+    margin-top: 73px;
     margin-bottom: 53px;
   }
 
@@ -111,5 +117,9 @@
     width: 366px;
     margin-left: 16px;
     text-align: justify;
+  }
+
+  .example-section__span {
+    margin-left: 59px;
   }
 }

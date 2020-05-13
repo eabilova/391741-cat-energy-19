@@ -64,6 +64,10 @@
     width: @tablet-width;
   }
 
+  .program-form__wrapper {
+    margin-bottom: 75px;
+  }
+
   .program-from__title {
     width: 323px;
     margin-left: 70px;
@@ -79,6 +83,8 @@
   }
 
   .program-form__fieldset-title {
+    padding-bottom: 10px;
+
     font-size: 36px;
     line-height: 36px;
   }
@@ -115,35 +121,32 @@
 @media (min-width: @desktop-width) {
   .program-form__wrapper {
     display: flex;
+    justify-content: space-between;
     width: 1220px;
     margin: 0 auto;
-    margin-bottom: 27px;
   }
 
   .program-form__title-wrapper {
-    width: @desktop-width;
+    width: 1220px;
   }
 
   .program-from__title {
-    margin-left: 111px;
+    margin-left: 0;
   }
 
   .program-form__fieldset-wrapper {
-    width: 1174px;
+    width: 1220px;
 
     &.shorten__wrapper {
-      width: 610px;
+      width: 100%;
     }
-  }
-
-  .program-form__fieldset-title {
-    margin-left: 41px;
   }
 
   .program-form__button {
     width: 568px;
-    margin-left: 10px;
-    margin-right: 80px;
+    padding-top: 14px;
+    margin-right: 81px;
+    margin-left: 2px;
   }
 
   .program-form__note {

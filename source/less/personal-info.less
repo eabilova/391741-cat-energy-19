@@ -40,6 +40,10 @@
     border: none;
     margin: 0 auto;
     margin-bottom: 20px;
+
+    &.program-form__fieldset {
+      padding-bottom: 53px;
+    }
   }
 
   .personal-info__label {
@@ -70,10 +74,16 @@
 
 @media (min-width: @desktop-width) {
   .personal-info {
-    margin-left: 7px;
+    &.program-form__fieldset {
+      width: 571px;
+      margin: 0;
+      padding-bottom: 42px;
+    }
   }
 
   .personal-info__input {
+    padding-left: 18px;
+
     &--name {
       width: 506px;
     }

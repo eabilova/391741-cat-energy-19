@@ -27,7 +27,7 @@
   .additions-item {
     width: 92vw;
     padding-top: 10px;
-    padding-bottom: 12px;
+    padding-bottom: 10px;
 
     border: 1px solid @outline-color;
 
@@ -48,6 +48,8 @@
   }
 
   .additions-item__title {
+    margin-bottom: 13px;
+
     font-size: 20px;
     line-height: 20px;
   }
@@ -57,20 +59,28 @@
   .additions-item {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     width: 100%;
-    padding-top: 12px;
-    padding-bottom: 2px;
+    padding-top: 15px;
+    padding-bottom: 0;
+
+    border: none;
+    border-top: 1px solid @outline-color;
 
     .catalog-item__button {
       width: 245px;
+      margin-top: 2px;
+      margin-bottom: 13px;
     }
   }
 
   .additions-item__wrapper {
-    margin-top: 7px;
+    width: 651px;
+    margin: 0;
   }
 
   .additions-item__title {
     margin-left: 3px;
+    margin-bottom: 9px;
   }
 }
