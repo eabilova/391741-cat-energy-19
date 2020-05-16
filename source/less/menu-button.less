@@ -1,11 +1,30 @@
 .menu-button {
-  width: 25px;
   height: 19px;
   margin-top: 12px;
-  margin-right: 4px;
 
   border: none;
   background-color: transparent;
+  background-repeat: no-repeat;
+
+  &.off {
+    width: 25px;
+
+    background-image: url("../img/icon-mobile-menu.svg");
+  }
+
+  &.on {
+    width: 19px;
+
+    background-image: url("../img/icon-close.svg");
+  }
+}
+
+.menu-button__icon {
+  display: none;
+
+  &.show {
+    display: inline-block;
+  }
 }
 
 @media (min-width: @tablet-width) {

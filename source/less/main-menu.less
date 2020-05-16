@@ -19,12 +19,20 @@
 
 .main-menu__item-link {
   display: block;
-  padding-top: 23px;
-  padding-bottom: 22px;
+  padding-top: 22px;
+  padding-bottom: 23px;
 
   color: @main-font-color;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-menu__item {
+    &:last-child {
+      border-bottom: 1px solid @outline-color;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {

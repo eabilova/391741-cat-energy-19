@@ -1,9 +1,31 @@
 .example-slider {
+  position: relative;
   min-height: 320px;
+  width: @mobile-width;
+  margin: 0 auto;
 }
 
 .example-slider__image {
-  margin-left: 0;
+  position: absolute;
+  display: block;
+
+  &--before{
+    left: 0;
+  }
+
+  &--after {
+    display: none;
+    left: 15%;
+  }
+}
+
+.example-slider__toggle {
+  position: absolute;
+  display: flex;
+  width: 210px;
+  margin: 0 auto;
+  bottom: 11px;
+  left: 17%;
 }
 
 .example-slider__was {
@@ -16,13 +38,6 @@
   line-height: 20px;
   text-align: left;
   text-transform: uppercase;
-}
-
-.example-slider__toggle {
-  display: flex;
-  width: 210px;
-  margin: 0 auto;
-  margin-top: 12px;
 }
 
 .example-slider__line {
@@ -50,14 +65,12 @@
 
 @media (min-width: @tablet-width) {
   .example-slider {
-    position: relative;
-    width: 92vw;
+    width: 708px;
     min-height: 460px;
     margin: 0 auto;
   }
 
   .example-slider__toggle {
-    position: absolute;
     width: 586px;
     bottom: 46px;
     left: 8.5%;
@@ -96,11 +109,17 @@
   }
 
   .example-slider__image {
-    position: absolute;
     bottom: 112px;
-    left: 17px;
     width: 685px;
     height: 517px;
+
+    &--before {
+      left: 17px;
+    }
+
+    &--after {
+      left: 2.5%;
+    }
   }
 }
 
@@ -115,8 +134,7 @@
   }
 
   .example-slider__image {
-    position: absolute;
     bottom: 132px;
-    left: -47px;
+    left: -46px;
   }
 }

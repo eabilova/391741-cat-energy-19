@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.min.css" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -19,11 +18,10 @@
               <img class="page-header__logo-image logo-image__main" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип «Кэт Энерджи»">
             </picture>
           </a>
-          <button class="menu-button">
-            <img class="menu-button__icon" src="img/icon-mobile-menu.svg" width="25" height="19" alt="Открыть">
+          <button onclick="openMenu()" class="menu-button menu-button off" id="menu-button">
           </button>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-nav-id">
           <ul class="main-nav__list main-menu">
             <li class="main-menu__item main-menu__item--active index">
               <a class="main-menu__item-link main-menu__item-link--index">Главная</a>
@@ -108,11 +106,15 @@
               <div class="example-section__column-two">
                 <div class="example-section__ slider example-slider">
                   <picture>
-                    <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
-                    <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                    <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                     <img class="example-slider__image example-slider__image--before" src="img/before-mobile@1x.png" width="320" height="242" alt="Было">
                   </picture>
-                  <img class="example-slider__image example-slider__image--after visually-hidden" src="img/after-mobile@1x.png" width="251" height="240" alt="Стало">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                    <img class="example-slider__image example-slider__image--after" src="img/after-mobile@1x.png" width="251" height="240" alt="Стало">
+                  </picture>
                   <div class="example-slider__toggle">
                     <p class="example-slider__was">Было</p>
                     <div class="example-slider__line">
@@ -181,5 +183,7 @@
         </a>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/picturefill.js"></script>
   </body>
 </html>

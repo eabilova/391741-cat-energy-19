@@ -9,6 +9,9 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var server = require("browser-sync").create();
+const htmlmin = require('gulp-htmlmin');
+var uglify = require('gulp-uglify');
+var pipeline = require('readable-stream').pipeline;
 
 
 var imagemin = require("gulp-imagemin");
@@ -80,6 +83,20 @@ gulp.task("html", function () {
       include()
     ]))
     .pipe(gulp.dest("build"));
+});
+
+gulp.task('minify', () => {
+  return gulp.src('src/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('compress', function () {
+  return pipeline(
+    gulp.src('lib/*.js'),
+    uglify(),
+    gulp.dest('build')
+  );
 });
 
 gulp.task("copy", function () {
