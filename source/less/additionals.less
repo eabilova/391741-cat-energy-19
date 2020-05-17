@@ -2,7 +2,7 @@
   border: none;
   border-top: 3px solid @main-bg-color;
 
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .additionals__title {
@@ -23,6 +23,10 @@
   margin: 0 auto;
 }
 
+.additionals__label {
+  position: relative;
+}
+
 .additionals__checkbox {
   display: none;
 
@@ -32,24 +36,33 @@
   & + .additionals__label {
     &::before {
       display: inline-block;
-      vertical-align: -127%;
+      vertical-align: -114%;
       box-sizing: border-box;
       margin-right: 16px;
-      margin-bottom: 13px;
+      margin-bottom: 12px;
 
       content: "";
       width: 30px;
       height: 30px;
-      border: solid 1px @outline-color;
+      border: solid 1px @outline-color-opacity;
       background-color: transparent;
     }
   }
 
-  &:checked + .additionals__label::before {
-    background-image: url("../img/icon-tick.svg");
-    background-size: 22px 17px;
-    background-repeat: no-repeat;
-    background-position: center;
+  &:checked {
+    & + .additionals__label::after {
+      position: absolute;
+      left: 6px;
+      top: 5px;
+      display: inline-block;
+
+      content: "";
+      width: 19px;
+      height: 10px;
+      transform: rotate(-45deg);
+      border-left: 2px solid @main-bg-color;
+      border-bottom: 2px solid @main-bg-color;
+    }
   }
 }
 
@@ -60,7 +73,7 @@
 
 @media (min-width: @tablet-width) {
   .additionals {
-    margin-bottom: 19px;
+    margin-bottom: 21px;
   }
 
   .additionals__title {
@@ -88,9 +101,16 @@
       &::before {
         width: 40px;
         height: 40px;
-        vertical-align: -45px;
+        vertical-align: -44px;
         margin-bottom: 33px;
         margin-right: 18px;
+      }
+    }
+
+    &:checked {
+      & + .additionals__label::after {
+        left: 10px;
+        top: 11px;
       }
     }
   }
@@ -104,6 +124,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .additionals {
+    margin-bottom: 19px;
+  }
+
   .additionals__wrapper {
     justify-content: space-between;
     width: 1220px;
@@ -126,7 +150,29 @@
     width: 220px;
   }
 
-  .additionals__checkbox + .additionals__label {
-    margin-right: 25px;
+  .additionals__checkbox {
+    & + .additionals__label {
+      margin-right: 25px;
+    }
+
+    &:hover {
+      & + .additionals__label {
+        &::before {
+          border-color: @outline-color;
+        }
+      }
+    }
+
+    &:active {
+      & + .additionals__label {
+        &::before {
+          opacity: 0.3;
+        }
+      }
+
+      &:checked + .additionals__label::after {
+        opacity: 0.3;
+      }
+    }
   }
 }

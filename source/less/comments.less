@@ -56,12 +56,21 @@
 @media (min-width: @desktop-width) {
   .comments {
     &.program-form__fieldset {
-      margin-bottom: 69px;
+      margin-bottom: 67px;
     }
   }
 
   .comments__comment-field {
     width: 1220px;
+
+    &:hover {
+      border-color: @outline-color;
+    }
+
+    &:focus {
+      border-color: @arial-font-color;
+      outline: @arial-font-color;
+    }
   }
 
   .comments__title {
