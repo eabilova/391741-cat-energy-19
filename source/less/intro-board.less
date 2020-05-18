@@ -1,4 +1,8 @@
 .intro-board {
+  background: linear-gradient(180deg, rgba(99,167,58,1) 63.5%, rgba(255,255,255,1) 36.5%);
+}
+
+.intro-board__image-wrapper {
   position: relative;
 
   margin: 0 auto;
@@ -45,13 +49,17 @@
 }
 
 @media (min-width: @mobile-width) and (min-resolution: @retina-dpi), (min-width: @mobile-width) and (min-resolution: @retina-dppx) {
-  .intro-board {
+  .intro-board__image-wrapper {
     background-image: url("../img/index-can-mobile@2x.png"), url("../img/index-background-mobile@2x.png");
   }
 }
 
 @media (min-width: @tablet-width) {
   .intro-board {
+    background: @page-wht-bg-color;
+  }
+
+  .intro-board__image-wrapper {
     width: @tablet-width;
     min-height: 809px;
     padding-top: 46px;
@@ -93,13 +101,17 @@
 }
 
 @media (min-width: @tablet-width) and (min-resolution: @retina-dpi), (min-width: @tablet-width) and (min-resolution: @retina-dppx) {
-  .intro-board {
+  .intro-board__image-wrapper {
     background-image: url("../img/index-can-tablet@2x.jpg");
   }
 }
 
 @media (min-width: @desktop-width) {
   .intro-board {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 50%,  rgba(99,167,58,1) 50%);
+  }
+
+  .intro-board__image-wrapper {
     width: @desktop-width;
     padding-top: 0;
     min-height: 696px;
@@ -132,7 +144,7 @@
 }
 
 @media (min-width: @desktop-width) and (min-resolution: @retina-dpi), (min-width: @desktop-width) and (min-resolution: @retina-dppx) {
-  .intro-board {
+  .intro-board__image-wrapper {
     background-image: url("../img/index-can-desktop@2x.png"), url("../img/index-background-desktop@2x.jpg");
   }
 }
