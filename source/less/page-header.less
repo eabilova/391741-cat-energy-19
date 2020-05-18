@@ -14,7 +14,7 @@
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 13px;
-  width: 87vw;
+  width: 280px;
 }
 
 @media (min-width: @mobile-width) and (max-width: @mobile-width-only) {
@@ -62,6 +62,20 @@
 
   .page-header__wrapper {
     width: 720px;
+  }
+
+  .page-header__logo {
+    &:disabled {
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   .page-header__logo-image {

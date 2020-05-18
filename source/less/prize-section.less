@@ -38,6 +38,12 @@
   font-family: @arial-font;
 }
 
+@media (min-width: @mobile-width) and (min-resolution: @retina-dpi), (min-width: @mobile-width) and (min-resolution: @retina-dppx) {
+  .prize-wrapper {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+}
+
 @media (min-width: @tablet-width) {
   .prize-section {
     width: 708px;
@@ -89,7 +95,7 @@
   }
 
   .prize-section__wrapper {
-    width: 17.2vw;
+    width: 245px;
   }
 
   .prize-wrapper {
@@ -110,5 +116,11 @@
 
   .prize-section__text {
     text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) and (min-resolution: @retina-dpi), (min-width: @desktop-width) and (min-resolution: @retina-dppx) {
+  .prize-wrapper {
+    background-image: url("../img/gift-photo-desktop@2x.jpg");
   }
 }

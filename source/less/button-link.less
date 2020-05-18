@@ -6,6 +6,7 @@
   color: @alt-font-color;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
 
   background-color: @main-bg-color;
   border: none;
@@ -15,7 +16,19 @@
   .button-link {
     font-size: 20px;
     line-height: 20px;
-    // padding-top: 16px;
-    // padding-bottom: 15px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .button-link {
+    &:hover {
+      background-color: #5eaa2f;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+

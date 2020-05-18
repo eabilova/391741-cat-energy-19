@@ -10,25 +10,23 @@
 }
 
 .contacts__title {
-  display: inline-block;
-  vertical-align: bottom;
-
   box-sizing: border-box;
-  padding-top: 22px;
+  padding-top: 21px;
   padding-left: 14px;
   padding-right: 21px;
-  margin-bottom: 33px;
+  margin-bottom: 34px;
   width: 217px;
 }
 
 .contacts__wrapper {
   display: flex;
   flex-direction: column;
-  width: 89vw;
+  width: 286px;
   margin: 0 auto;
 }
 
 .contacts__label {
+  position: relative;
   text-transform: uppercase;
 }
 
@@ -37,24 +35,46 @@
   text-transform: uppercase;
   padding: 11px 0 14px 15px;
 
-  border: 1px solid @outline-color;
+  font-family: @oswald-font;
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid @outline-color-opacity;
 
   &--email {
-    width: 69vw;
+    width: 219px;
     margin-left: 8px;
     margin-bottom: 14px;
   }
 
   &--phone {
-    width: 64vw;
+    width: 204px;
     margin-left: 7px;
+  }
+}
+
+.contacts__input-icon {
+  position: absolute;
+  fill: @sec-font-color;
+
+  &--email {
+    width: 18px;
+    height: 14px;
+    right: 20px;
+    top: 15px;
+  }
+
+  &--phone {
+    width: 21px;
+    height: 21px;
+    right: 18px;
+    top: 12px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .contacts {
     &.program-form__fieldset {
-      margin-bottom: 37px;
+      margin-bottom: 38px;
     }
   }
 
@@ -74,8 +94,11 @@
   }
 
   .contacts__input {
-    padding-top: 14px;
+    padding-top: 11px;
+    padding-bottom: 9px;
     padding-left: 20px;
+
+    font-size: 20px;
 
     &--email {
       width: 552px;
@@ -86,6 +109,19 @@
     &--phone {
       width: 537px;
       margin-left: 9px;
+    }
+  }
+
+
+  .contacts__input-icon {
+    &--email {
+      right: 26px;
+      top: 21px;
+    }
+
+    &--phone {
+      right: 24px;
+      top: 17px;
     }
   }
 
@@ -106,6 +142,7 @@
   .contacts__title {
     padding-top: 0;
     margin-left: 65px;
+    margin-bottom: 64px;
   }
 
   .contacts__wrapper {
@@ -116,6 +153,7 @@
 
   .contacts__input {
     padding-left: 17px;
+    padding-bottom: 11px;
 
     &--email {
       width: 486px;
@@ -124,6 +162,40 @@
     &--phone {
       width: 472px;
       margin-left: 13px;
+    }
+
+    &:hover {
+      border-color: @outline-color;
+    }
+
+    &:focus {
+      border-color: @arial-font-color;
+      outline: @arial-font-color;
+    }
+
+    &:invalid {
+      outline-color: @error-color;
+    }
+  }
+
+
+  .contacts__input-icon {
+    &--email {
+      right: 18px;
+      top: 21px;
+    }
+
+    &--phone {
+      right: 21px;
+      top: 17px;
+    }
+
+    &:active {
+      fill: @main-bg-color;
+    }
+
+    &:invalid {
+      fill: @error-color;
     }
   }
 

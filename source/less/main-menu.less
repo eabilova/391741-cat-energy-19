@@ -27,6 +27,14 @@
   text-decoration: none;
 }
 
+@media (max-width: @mobile-width-only) {
+  .main-menu__item {
+    &:last-child {
+      border-bottom: 1px solid @outline-color;
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-menu__item {
     border: none;
@@ -69,6 +77,14 @@
 
   .main-menu__item-link {
     font-size: 20px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .main-menu__item-link--index {

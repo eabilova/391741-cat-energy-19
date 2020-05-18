@@ -1,4 +1,6 @@
 .personal-info {
+  display: flex;
+  flex-direction: column;
   border: none;
   border-bottom: 1px solid @outline-color;
 
@@ -15,7 +17,11 @@
   text-transform: uppercase;
   box-sizing: border-box;
   padding: 12px 0 14px 14px;
-  border: 1px solid  @outline-color;
+  border: 1px solid  @outline-color-opacity;
+
+  font-family: @oswald-font;
+  font-size: 16px;
+  line-height: 18px;
 
   &--name {
     width: 228px;
@@ -51,23 +57,25 @@
   }
 
   .personal-info__input {
-    padding: 12px 0 14px 20px;
+    padding: 8px 0 11px 20px;
+    margin-bottom: 21px;
+
+    font-size: 20px;
 
     &--name {
       width: 566px;
       margin-left: 11px;
-      margin-bottom: 21px;
     }
 
     &--weight {
       width: 534px;
       margin-left: 14px;
-      margin-bottom: 21px;
     }
 
     &--age {
       width: 495px;
-      margin-left: 12px;
+      margin-left: 11px;
+      margin-bottom: 0;
     }
   }
 }
@@ -94,6 +102,19 @@
 
     &--age {
       width: 436px;
+    }
+
+    &:hover {
+      border-color: @outline-color;
+    }
+
+    &:active {
+      border-color: @arial-font-color;
+      outline-color: @arial-font-color;
+    }
+
+    &:invalid {
+      outline-color: @error-color;
     }
   }
 }
