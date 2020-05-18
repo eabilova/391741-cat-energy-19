@@ -168,13 +168,27 @@
       border-color: @outline-color;
     }
 
+    &:active {
+      & + .contacts__input-icon {
+        fill: @main-bg-color;
+      }
+    }
+
     &:focus {
       border-color: @arial-font-color;
       outline: @arial-font-color;
+
+      & + .contacts__input-icon {
+        fill: @main-bg-color;
+      }
     }
 
     &:invalid {
       outline-color: @error-color;
+
+      & + .contacts__input-icon {
+        fill: @error-color;
+      }
     }
   }
 
@@ -188,14 +202,6 @@
     &--phone {
       right: 21px;
       top: 17px;
-    }
-
-    &:active {
-      fill: @main-bg-color;
-    }
-
-    &:invalid {
-      fill: @error-color;
     }
   }
 

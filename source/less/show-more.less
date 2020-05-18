@@ -28,9 +28,14 @@
 }
 
 .show-more__button {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: -3px;
+  margin-bottom: 24px;
+
   padding-top: 10px;
   padding-bottom: 9px;
-  margin-bottom: 24px;
 
   font-family: @oswald-font;
   font-size: 16px;
@@ -46,7 +51,7 @@
 .show-more__link {
   display: block;
   width: 30px;
-  margin: 28px auto 18px auto;
+  margin: 28px auto 21px auto;
 }
 
 .show-more__icon {
@@ -89,6 +94,11 @@
 
     font-size: 16px;
   }
+
+  .show-more__button {
+    width: 249px;
+    margin-bottom: 15px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -104,6 +114,9 @@
   }
 
   .show-more__button {
+    width: 169px;
+    margin-bottom: 18px;
+
     &:hover {
       background-color: @sec-outline-color;
     }
