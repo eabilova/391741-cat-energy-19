@@ -128,5 +128,20 @@
         opacity: 0.3;
       }
     }
+
+    &:disabled {
+      & + .goal__label {
+        opacity: 0.1;
+
+        &::before {
+          pointer-events: none;
+        }
+      }
+
+      &:checked + .goal__label::after {
+        pointer-events: none;
+        opacity: 0.1;
+      }
+    }
   }
 }
