@@ -1,3 +1,6 @@
+document.getElementById("menu-button").classList.toggle("show");
+document.getElementById("main-nav-id").classList.remove("show");
+
 function openMenu() {
   document.getElementById("main-nav-id").classList.toggle("show");
 }
