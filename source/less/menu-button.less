@@ -1,10 +1,15 @@
 .menu-button {
+  display: none;
   height: 19px;
   margin-top: 12px;
 
   border: none;
   background-color: transparent;
   background-repeat: no-repeat;
+
+  &.show {
+    display: block;
+  }
 
   &.off {
     width: 25px;
@@ -29,6 +34,8 @@
 
 @media (min-width: @tablet-width) {
   .menu-button {
-    display: none;
+    &.show {
+      display: none;
+    }
   }
 }

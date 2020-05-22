@@ -31,9 +31,10 @@
 
 .program-form__fieldset-title {
   box-sizing: border-box;
-  padding-left: 17px;
+  padding-left: 18px;
   padding-bottom: 7px;
   margin-bottom: 29px;
+  margin-left: calc((100% - @mobile-width)/2);
 
   font-size: 24px;
   line-height: 24px;
@@ -43,7 +44,6 @@
 
   &.contacts__title {
     padding-top: 21px;
-    padding-left: 18px;
     padding-bottom: 4px;
   }
 }
@@ -101,7 +101,7 @@
   .program-form__fieldset-title {
     padding-bottom: 10px;
     padding-left: 39px;
-    margin-left: 28px;
+    margin-left: calc((100% - 708px)/2);
 
     font-size: 36px;
     line-height: 36px;
@@ -194,7 +194,6 @@
   }
 
   .program-form__fieldset-title {
-    padding-left: 37px;
-    margin-left: 0px;
+    margin-left: calc((100% - @desktop-width)/2);
   }
 }
