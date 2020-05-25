@@ -31,10 +31,9 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
-    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream())
+    .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
@@ -59,7 +58,7 @@ gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
-    imagemin.jpegtran({progressive: true}),
+    imagemin.mozjpeg({progressive: true}),
     imagemin.svgo()
   ]))
   .pipe(gulp.dest("source/img"));

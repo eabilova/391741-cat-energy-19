@@ -135,6 +135,8 @@
 
     &:active {
       & + .additionals__label {
+        opacity: 0.3;
+
         &::before {
           opacity: 0.3;
         }
@@ -150,13 +152,14 @@
         opacity: 0.1;
 
         &::before {
+          opacity: 0.2;
           pointer-events: none;
         }
       }
 
       &:checked + .additionals__label::after {
         pointer-events: none;
-        opacity: 0.1;
+        opacity: 0.2;
       }
     }
   }

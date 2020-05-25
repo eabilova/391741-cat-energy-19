@@ -110,7 +110,22 @@
 
 @media (min-width: @desktop-width) {
   .intro-board {
+    position: relative;
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(99, 167, 58, 1) 50%);
+
+    &::before {
+      position: absolute;
+      display: block;
+
+      content: "";
+      width: 50%;
+      min-height: 696px;
+      top: 0;
+      right: 0;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
   .intro-board__image-wrapper {
@@ -121,9 +136,9 @@
 
     color: @main-font-color;
 
-    background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg");
-    background-size: 552px 499px, 720px 696px;
-    background-position: 489px 142px, 112% top;
+    background-image: url("../img/index-can-desktop@1x.png");
+    background-size: 552px 499px;
+    background-position: 489px 142px;
   }
 
   .intro-board__wrapper {
@@ -139,6 +154,12 @@
 
 @media (min-width: @desktop-width) and (min-resolution: @retina-dpi), (min-width: @desktop-width) and (min-resolution: @retina-dppx) {
   .intro-board__image-wrapper {
-    background-image: url("../img/index-can-desktop@2x.png"), url("../img/index-background-desktop@2x.jpg");
+    background-image: url("../img/index-can-desktop@2x.png");
+  }
+
+  .intro-board {
+    &::before {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 }
